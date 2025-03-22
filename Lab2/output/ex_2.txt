@@ -1,0 +1,9 @@
+Sum of arguments 1 + 2 = 3
+Arithmetic: 13 7 30 3.3333333333333335 1
+Relational: True False False
+Logical: True True
+Bitwise: 2 11 9
+Input your age please: 19
+You are eligible for voting!
+Input some year: 2025
+Not Leap Year

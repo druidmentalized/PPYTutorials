@@ -1,0 +1,4 @@
+List: [10, 20, 30, 40, 50]
+Sum of all numbers: 150, their average: 30.0
+Reversed list from above: [50, 40, 30, 20, 10]
+For the list above min: 10 and max: 50

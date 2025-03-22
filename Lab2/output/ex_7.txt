@@ -1,0 +1,8 @@
+Fibonacci for 5 is 8
+Fibonacci for 15 is 987
+Is 153 and armstrong number? True
+Is 201 and armstrong number? False
+Nums before function call: [1, 2, 3]
+Nums after function call: [1, 2, 3, 100]
+Factorial for 5 is 120
+Factorial for 13 is 6227020800

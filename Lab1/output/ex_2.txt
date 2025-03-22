@@ -1,0 +1,1 @@
+All created variables: 19, 9.16, Hello World!, True

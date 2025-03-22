@@ -1,0 +1,3 @@
+string + int is not allowed!
+string + float is not allowed!
+b + c: 8.5

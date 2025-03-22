@@ -1,0 +1,4 @@
+Input some text: Andromeda is galaxy in our universe
+Lowercase: andromeda is galaxy in our universe
+Uppercase: ANDROMEDA IS GALAXY IN OUR UNIVERSE
+Replacing 'a' with 'b': Andromedb is gblbxy in our universe

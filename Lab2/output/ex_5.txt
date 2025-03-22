@@ -1,0 +1,19 @@
+Original text: Exercise 5 to enhance String knowledge in Python
+Title Case: Exercise 5 To Enhance String Knowledge In Python
+Uppercase: EXERCISE 5 TO ENHANCE STRING KNOWLEDGE IN PYTHON
+Lowercase: exercise 5 to enhance string knowledge in python
+List of words in the text: ['Exercise', '5', 'to', 'enhance', 'String', 'knowledge', 'in', 'Python']
+After replacing 'String' with 'Integer': Exercise 5 to enhance Integer knowledge in Python
+Number of occurrences of 'e': 6
+Trimmed text: Exercise 5 to enhance String knowledge in Python
+Is the text alphanumeric? True
+
+string module constants:
+ASCII Letters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+Digits: 0123456789
+Punctuation: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+Enter word: word
+Not Palindrome
+Enter line of text: Some test line of text
+Chars: 22, Vowels: 7, Spaces: 4

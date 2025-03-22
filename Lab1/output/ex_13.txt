@@ -1,0 +1,1 @@
+Tuple containing string and integer values: (10, 'something', 20, 'something more')

@@ -1,0 +1,2 @@
+[['first', 'list'], ['second', 'list'], ['third', 'list']]
+The list was deleted, it cannot be printed

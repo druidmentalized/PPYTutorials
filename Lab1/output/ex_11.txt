@@ -1,0 +1,5 @@
+bool1: True, bool2: False
+
+AND: False
+OR: True
+NOT bool1: False

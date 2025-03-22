@@ -1,0 +1,4 @@
+'f-method':
+Typically year contains 365 days
+'.format' method:
+Typically year contains 365 days

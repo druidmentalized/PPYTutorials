@@ -1,0 +1,1 @@
+Variables created in one line: 1, var2, False

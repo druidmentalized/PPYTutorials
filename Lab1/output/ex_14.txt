@@ -1,0 +1,7 @@
+All elements except last: [10, 'something', 20]
+Every second element: [10, 20]
+Every second element up to the middle: [10]
+Is x in the list: True
+Tuple vs List: Lists are mutable, Tuples are immutable
+Updated list: [10, 'inserted_value', 20, 'something more', 'extra', 'values']
+Count of 'X': 0
