@@ -1,0 +1,7 @@
+Recursive 1 factorial: 1
+Recursive 5 factorial: 120
+Recursive 10 factorial: 3628800
+
+Iterative 3 factorial: 6
+Iterative 7 factorial: 5040
+Iterative 12 factorial: 479001600

@@ -1,0 +1,7 @@
+name: Daniil
+age: 19
+country: Kenia
+
+name: Alexsosandr
+age: 18
+country: Azerbaijan

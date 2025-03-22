@@ -1,0 +1,7 @@
+Recursive fibonacci for 5: 5
+Recursive fibonacci for 15: 610
+Recursive fibonacci for 25: 75025
+
+Recursive fibonacci for 10: 55
+Recursive fibonacci for 20: 6765
+Recursive fibonacci for 30: 832040

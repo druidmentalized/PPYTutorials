@@ -1,0 +1,2 @@
+Price after discount: 90.0
+Price after discount: 500.0
