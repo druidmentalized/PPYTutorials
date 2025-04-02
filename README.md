@@ -7,11 +7,10 @@ This repository contains a complete collection of Python lab exercises and assig
 ## 📁 Structure
 Each `Lab<number>/` folder contains individual Python scripts solving a set of programming exercises.
 
-Example:
-- `Lab1/` – Basic Python syntax, variables, input/output, and simple operations.
-- `Lab2/` – Control structures, loops, conditional logic, and data types.
-- `Lab3/` – Functions, recursion, tuples, lists, string operations, and more.
-- ...
+- `Lab1/` – First tutorial tasks
+- `Lab2/` – Second tutorial tasks.
+- `Lab3/` – Third tutorial tasks.
+- And so on...
 
 ---
 
@@ -20,6 +19,10 @@ Example:
 - **Lab1**: Variables, I/O, basic data types, conditionals
 - **Lab2**: Control structures, loops, arithmetic
 - **Lab3**: Functions, recursion, tuples, lists, strings
+- **Lab4**: Advanced Python features including list/dictionary comprehensions, decorators, generators, 
+  lambda expressions, and higher-order functions. Covers execution time measurement, authentication simulation,
+  validation decorators, matrix transposition, and functional-style filtering. Also includes an advanced word frequency
+  analysis task using generators and `collections.Counter`.
 - ...
 
 ---
