@@ -1,0 +1,2 @@
+Test list: ['Some', 'some', 'words', 'that', 'are', 'are', 'just', 'some']
+Dictionary: {'just': 1, 'words': 1, 'Some': 1, 'are': 2, 'some': 2, 'that': 1}

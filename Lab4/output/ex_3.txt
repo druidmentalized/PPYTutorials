@@ -1,0 +1,2 @@
+Before filtering: [1, 2, 3, 4, 5, 3, 4, 1, 9, 12]
+After filtering: [3, 3, 9, 12]

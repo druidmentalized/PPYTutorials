@@ -1,0 +1,2 @@
+Before sorting: ['Here', 'are', 'some', 'strings', 'that', 'we', 'are', 'working', 'with']
+After sorting: ['Here', 'are', 'some', 'we', 'are', 'working', 'with', 'strings', 'that']
