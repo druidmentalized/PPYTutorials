@@ -1,0 +1,2 @@
+Working with: Some test STRING tO TeSt working AbIlItY oF tHe ProGRam
+Result: sOME TEST string To tEsT WORKING aBiLiTy Of ThE pROgrAM

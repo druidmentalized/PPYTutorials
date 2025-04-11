@@ -1,0 +1,2 @@
+Working with: Test phenomena program python panama java test ananas banana java banana python java
+Result: {'test': 2, 'phenomena': 1, 'program': 1, 'python': 2, 'panama': 1, 'java': 3, 'ananas': 1, 'banana': 2}

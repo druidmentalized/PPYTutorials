@@ -1,0 +1,7 @@
+Working with:
+1) listen
+2) silent
+3) silly
+
+Result between 1) and 2): True
+Result between 1) and 3): False

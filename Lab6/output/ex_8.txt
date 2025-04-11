@@ -1,0 +1,2 @@
+Working with: Test phenomena program python panama java test ananas banana
+Result: 6
