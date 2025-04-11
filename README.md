@@ -19,10 +19,10 @@ Each `Lab<number>/` folder contains individual Python scripts solving a set of p
 - **Lab1**: Variables, I/O, basic data types, conditionals
 - **Lab2**: Control structures, loops, arithmetic
 - **Lab3**: Functions, recursion, tuples, lists, strings
-- **Lab4**: Advanced Python features including list/dictionary comprehensions, decorators, generators, 
-  lambda expressions, and higher-order functions. Covers execution time measurement, authentication simulation,
-  validation decorators, matrix transposition, and functional-style filtering. Also includes an advanced word frequency
-  analysis task using generators and `collections.Counter`.
+- **Lab4+5**: Advanced Python topics including comprehensions, decorators, generators, and lambdas. Tasks involve
+execution timing, basic authentication logic, data filtering, matrix transposition, and word frequency analysis.
+- **Lab6**: String operations like reversal, palindrome check, vowel and substring counting, case and punctuation 
+handling, text justification, email extraction, date formatting, and unique substring detection.
 - ...
 
 ---
