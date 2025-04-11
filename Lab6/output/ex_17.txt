@@ -1,0 +1,2 @@
+Working with: Contact me at jane.doe@example.com, dmitriy.barmuta@gmail.com or s29871@pjwstk.edu.pl
+Result: ['jane.doe@example.com', 'dmitriy.barmuta@gmail.com', 's29871@pjwstk.edu.pl']
