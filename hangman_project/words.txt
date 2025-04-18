@@ -1,0 +1,9 @@
+python
+hangman
+challenge
+variable
+developer
+function
+exception
+object
+inheritance

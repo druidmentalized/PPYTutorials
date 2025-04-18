@@ -1,10 +1,15 @@
 from config_loader import get_attempts_for_difficulty
+from word_provider import get_random_word
 
 
 def play():
     print("Welcome to the Hangman game!")
     attempts = choose_difficulty()
     print(f"In your game you'll have {attempts} attempts!")
+    word = get_random_word()
+    print(f"[DEBUG] Current word: {word}")
+    user_guess = "_" * len(word)
+
 
 
 def choose_difficulty():
@@ -29,4 +34,3 @@ def prompt_difficulty() -> str:
     if choice not in difficulty_map:
         print("Invalid choice. Defaulting to medium difficulty.")
     return difficulty_map.get(choice, "medium")
-
