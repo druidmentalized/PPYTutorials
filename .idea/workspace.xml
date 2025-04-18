@@ -4,144 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Update README">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Core classes for the Hangman project created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/output/ex_9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/output/ex_9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_13.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_14.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_15.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_16.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_17.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_17.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/source/ex_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/source/ex_9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/output/ex_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/output/ex_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/source/ex_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/source/ex_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/output/ex_9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/output/ex_9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/source/ex_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/source/ex_9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/output/ex_advanced.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/output/ex_advanced.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4+5/source/ex_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4+5/source/ex_advanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_17.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_18.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/output/ex_9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/output/ex_9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_13.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_14.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_15.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_16.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_17.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_17.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_18.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/source/ex_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/source/ex_9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +88,7 @@
       <recent name="$PROJECT_DIR$/Lab1/source" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hangman_project" />
       <recent name="$PROJECT_DIR$/Tests" />
       <recent name="$PROJECT_DIR$/Lab4Danya" />
       <recent name="$PROJECT_DIR$/s29871" />
@@ -263,7 +129,7 @@
       <workItem from="1744398994336" duration="3462000" />
       <workItem from="1744589095867" duration="50000" />
       <workItem from="1744708810022" duration="422000" />
-      <workItem from="1744994114984" duration="1249000" />
+      <workItem from="1744994114984" duration="3161000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -329,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744404678808</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Core classes for the Hangman project created">
+      <option name="closed" value="true" />
+      <created>1744995398552</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744995398552</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +228,8 @@
     <MESSAGE value="Partially made tasks from Lab6" />
     <MESSAGE value="Lab 6: all basic + additional tasks completed" />
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="Core classes for the Hangman project created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Core classes for the Hangman project created" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
