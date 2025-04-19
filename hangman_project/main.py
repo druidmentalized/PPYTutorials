@@ -1,7 +1,7 @@
-from hangman.game import play
+from hangman.game import start
 
 def main():
-    play()
+    start()
 
 if __name__ == '__main__':
     main()
