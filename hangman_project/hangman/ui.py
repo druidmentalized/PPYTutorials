@@ -9,82 +9,90 @@ class UI:
     def __init__(self):
         self.max_attempts = None
 
+    def set_max_attempts(self, max_attempts: int):
+        self.max_attempts = max_attempts
+
+    def display_separator(self):
+        print(Style.DIM + "-" * 50 + "")
+
     def display_hangman(self, wrong_guesses: int):
         hangman = load_ascii_stage(wrong_guesses, self.max_attempts)
-        print(Fore.RED + f"{hangman}\n")
+        print(Fore.LIGHTRED_EX + f"{hangman}")
 
     def display_welcome(self, attempts: int):
-        print(Fore.GREEN + Style.BRIGHT + "Welcome to the Hangman game!")
-        print(Fore.YELLOW + f"You have {attempts} attempts.")
-        print(Style.DIM + "Type /help to show all available commands\n")
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + "Welcome to the Hangman game!")
+        print(Fore.LIGHTYELLOW_EX + f"You have {attempts} attempts.")
+        print(Style.DIM + "Type /help to show all available commands")
 
     # Difficulty choice
     def display_difficulty_menu(self):
-        print(Fore.CYAN + "Please choose difficulty:")
-        print("1) easy -- 10 attempts")
-        print("2) medium -- 6 attempts")
-        print("3) hard -- 4 attempts")
+        print(Fore.LIGHTGREEN_EX + "Please choose difficulty:")
+        print(f"1) easy -- 10 attempts")
+        print(f"2) medium -- 6 attempts")
+        print(f"3) hard -- 4 attempts")
 
     def prompt_difficulty_choice(self) -> str:
-        return input(Fore.CYAN + "Your choice (1/2/3): " + Style.RESET_ALL).strip()
+        return input(Fore.LIGHTGREEN_EX + "Your choice (1/2/3): " + Style.RESET_ALL).strip()
 
     def notify_invalid_difficulty(self):
-        print(Fore.RED + "Invalid choice. Defaulting to medium difficulty.")
+        print(Fore.LIGHTRED_EX + "Invalid choice. Defaulting to medium difficulty.")
 
     # Game messages
     def display_current_guess(self, current: str, attempts: int):
-        print(Fore.MAGENTA + f"Current guess: {current}")
-        print(Fore.MAGENTA + f"Attempts left: {attempts}")
+        self.display_separator()
+        print(Fore.LIGHTGREEN_EX + f"Current guess: {current}")
+        print(Fore.LIGHTGREEN_EX + f"Attempts left: {attempts}")
 
     def prompt_guess(self) -> str:
-        return input(Fore.CYAN + "Guess a letter or word: " + Style.RESET_ALL).strip().lower()
+        return input(Fore.LIGHTGREEN_EX + "Guess a letter or word: " + Style.RESET_ALL).strip().lower()
 
     def notify_invalid_input(self):
-        print(Fore.RED + "Please enter a single letter, word or command starting with '/'.")
+        print(Fore.LIGHTRED_EX + "Please enter a single letter, word or command starting with '/'.")
 
     def notify_already_guessed(self):
-        print(Fore.YELLOW + "You've already guessed that letter.")
+        print(Fore.LIGHTYELLOW_EX + "You've already guessed that letter.")
 
     def notify_incorrect_letter(self):
-        print(Fore.RED + "Incorrect letter guess.")
+        print(Fore.LIGHTRED_EX + "Incorrect letter guess.")
 
     def notify_incorrect_word(self):
-        print(Fore.RED + "Incorrect word guess.")
+        print(Fore.LIGHTRED_EX + "Incorrect word guess.")
 
     def notify_incorrect_command(self):
-        print(Fore.RED + "Invalid command. Type /help to see all available commands")
+        print(Fore.LIGHTRED_EX + "Invalid command. Type /help to see all available commands.")
 
     # Commands messages
     def display_help(self):
-        print(Fore.GREEN + "Available commands:")
-        print(Fore.YELLOW + "/help    " + Style.RESET_ALL + "- Show this help message")
-        print(Fore.YELLOW + "/quit    " + Style.RESET_ALL + "- Quit the current game")
-        print(Fore.YELLOW + "/status  " + Style.RESET_ALL + "- Show current game status")
-        print(Fore.YELLOW + "/word    " + Style.RESET_ALL + "- (DEBUG) Reveal the hidden word")
+        self.display_separator()
+        print(Fore.LIGHTGREEN_EX + "Available commands:")
+        print(Fore.LIGHTYELLOW_EX + "/help    " + Style.RESET_ALL + "- Show this help message")
+        print(Fore.LIGHTYELLOW_EX + "/quit    " + Style.RESET_ALL + "- Quit the current game")
+        print(Fore.LIGHTYELLOW_EX + "/status  " + Style.RESET_ALL + "- Show current game status")
+        print(Fore.LIGHTYELLOW_EX + "/word    " + Style.RESET_ALL + "- (DEBUG) Reveal the hidden word")
 
     def display_status(self, current: str, attempts: int, guessed: set, difficulty: str):
-        print(Fore.GREEN + "\nCurrent statistics:")
-        print(Fore.MAGENTA + f"Your current guess: {current}")
-        print(Fore.MAGENTA + f"Attempts left: {attempts}")
-        print(Fore.MAGENTA + f"Guessed letters: {', '.join(sorted(guessed))}")
-        print(Fore.MAGENTA + f"Game difficulty: {difficulty}\n")
+        self.display_separator()
+        print(Fore.LIGHTGREEN_EX + "Current statistics:")
+        print(Fore.LIGHTGREEN_EX + f"Your current guess: {current}")
+        print(Fore.LIGHTGREEN_EX + f"Attempts left: {attempts}")
+        print(Fore.LIGHTGREEN_EX + f"Guessed letters: {', '.join(sorted(guessed))}")
+        print(Fore.LIGHTGREEN_EX + f"Game difficulty: {difficulty}")
 
     def display_quit(self):
-        print(Fore.CYAN + "Quitting...")
+        print(Fore.LIGHTCYAN_EX + "Quitting...")
 
     def display_hidden_word(self, word: str):
-        print(Fore.YELLOW + f"Hidden word: {word}")
+        print(Fore.LIGHTYELLOW_EX + f"Hidden word: {word}")
 
     # End game states
     def display_win(self, word: str, attempts: int):
-        print(Fore.GREEN + Style.BRIGHT + "\nCongratulations, you guessed the word correctly!")
-        print(Fore.CYAN + f"The word was: {word}")
-        print(Fore.CYAN + f"You had {attempts} attempts left.\n")
+        self.display_separator()
+        print(Fore.LIGHTGREEN_EX + Style.BRIGHT + "Congratulations, you guessed the word correctly!")
+        print(Fore.GREEN + f"The word was: {word}")
+        print(Fore.GREEN + f"You had {attempts} attempts left.")
 
     def display_lose(self, word: str, correct: int, total: int):
-        print(Fore.RED + Style.BRIGHT + "\nSorry, you weren't able to guess the word.")
-        print(Fore.CYAN + f"The word was: {word}")
-        print(Fore.CYAN + f"You guessed {correct} out of {total} letters correctly.\n")
-
-    def set_max_attempts(self, max_attempts: int):
-        self.max_attempts = max_attempts
+        self.display_separator()
+        print(Fore.LIGHTRED_EX + Style.BRIGHT + "Sorry, you weren't able to guess the word.")
+        print(Fore.RED + f"The word was: {word}")
+        print(Fore.RED + f"You guessed {correct} out of {total} letters correctly.")

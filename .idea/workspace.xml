@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Update README">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Fixes in some of the hangman models, correct attempt passing to the ui class added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_project/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/config_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/config_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_project/ascii/stage_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/ascii/stage_8.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hangman_project/hangman/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/word_provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/word_provider.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +161,7 @@
       <workItem from="1745008087751" duration="1612000" />
       <workItem from="1745010240464" duration="8833000" />
       <workItem from="1745074268944" duration="434000" />
-      <workItem from="1745077766308" duration="3698000" />
+      <workItem from="1745077766308" duration="4970000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -286,7 +283,31 @@
       <option name="project" value="LOCAL" />
       <updated>1745025406447</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Little updates in decoupling game logic from the ui. Hangman images taken out into separate directory">
+      <option name="closed" value="true" />
+      <created>1745081643660</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1745081643660</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Little updates in decoupling game logic from the ui. Hangman images taken out into separate directory">
+      <option name="closed" value="true" />
+      <created>1745081653026</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1745081653026</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixes in some of the hangman models, correct attempt passing to the ui class added">
+      <option name="closed" value="true" />
+      <created>1745082067964</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1745082067965</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +337,9 @@
     <MESSAGE value="Main game logic created and written" />
     <MESSAGE value="Big UI update. Still needs testing and debugging" />
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="Little updates in decoupling game logic from the ui. Hangman images taken out into separate directory" />
+    <MESSAGE value="Fixes in some of the hangman models, correct attempt passing to the ui class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes in some of the hangman models, correct attempt passing to the ui class added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
@@ -337,7 +360,7 @@
     <SUITE FILE_PATH="coverage/PythonProject$ex_14.coverage" NAME="ex_14 Coverage Results" MODIFIED="1742340133927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_11.coverage" NAME="ex_11 Coverage Results" MODIFIED="1744388173392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_16.coverage" NAME="ex_16 Coverage Results" MODIFIED="1744708943093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1745079430473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
+    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1745082707063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_advanced.coverage" NAME="ex_advanced Coverage Results" MODIFIED="1743682533373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_1.coverage" NAME="ex_1 Coverage Results" MODIFIED="1744386665033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1742339708294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
