@@ -10,6 +10,7 @@ class Game:
         self.difficulty = self.choose_difficulty()
         self.attempts = get_attempts_for_difficulty(self.difficulty)
         self.max_attempts = self.attempts
+        self.ui.set_max_attempts(self.max_attempts)
 
         self.word = get_random_word()
         self.wrong_guesses = 0
