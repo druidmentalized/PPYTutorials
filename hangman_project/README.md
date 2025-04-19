@@ -1,12 +1,24 @@
-# Hangman Game (Python Project)
+# Hangman Game
 
-A terminal-based implementation of the classic **Hangman** game, written in Python. The game randomly selects a word from a file, and the player must guess the word one letter at a time (or by full-word guesses) within a limited number of attempts.
+A console-based implementation of the classic **Hangman** game, written in Python. The game randomly selects a word from a file, and the player must guess the word one letter at a time (or by full-word guesses) within a limited number of attempts.
 
 This project is modular and cleanly separated into logical components using object-oriented programming. It includes enhanced user interaction via ASCII visuals and optional terminal coloring using `colorama`.
 
 ---
 
 ## Project Structure
+
+- `hangman_project/`
+	- `hangman/` (main package)
+	  - **__init__.py**
+      - **game.py** — core game logic
+      -	**ui.py** — handles output, ASCII art, and terminal styling
+	  - **config_loader.py** — reads settings from config.ini
+	  - **word_provider.py** — loads a random word from the word list
+	- **config.ini** — stores difficulty settings
+	- **words.txt** — list of playable words (one per line)
+	- `main.py` — program entry point
+	- **README.md** — project description and usage instructions
 
 ---
 
