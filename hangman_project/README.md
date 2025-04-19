@@ -46,6 +46,46 @@ This project is modular and cleanly separated into logical components using obje
 - Statistics tracking (games played, wins/losses)
 - Clean, testable architecture (OOP + modular functions)
 
+## Example gameplay
+
+```text
+Please choose difficulty:
+1) easy -- 10 attempts
+2) medium -- 6 attempts
+3) hard -- 4 attempts
+Your choice (1/2/3): 3
+Welcome to the Hangman game!
+You have 4 attempts.
+Type /help to show all available commands
+--------------------------------------------------
+Current guess: ______
+Attempts left: 4
+Guess a letter or word: a
+Incorrect letter guess.
+   _______
+  |/      |
+  |      (_)
+  |       |
+  |
+  |
+__|__
+--------------------------------------------------
+Current guess: ______
+Attempts left: 3
+Guess a letter or word: e
+--------------------------------------------------
+Current guess: ___e__
+Attempts left: 3
+Guess a letter or word: object
+--------------------------------------------------
+Congratulations, you guessed the word correctly!
+The word was: object
+You had 3 attempts left.
+Would you like to play again? (y/n) n
+Thank you for playing!
+Statistics: 1 games: 1 wins | 0 loses
+```
+
 ## Commands Available During the Game
 - `/help` - Show all available commands
 - `/quit` - Quit the current game

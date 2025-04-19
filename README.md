@@ -7,9 +7,10 @@ This repository contains a complete collection of Python lab exercises and assig
 ## 📁 Structure
 Each `Lab<number>/` folder contains individual Python scripts solving a set of programming exercises.
 
-- `Lab1/` – First tutorial tasks
-- `Lab2/` – Second tutorial tasks.
-- `Lab3/` – Third tutorial tasks.
+- `hangman_project/` – Project recreating popular game **Hangman** as the console-based application.
+- `lab1/` – First tutorial tasks
+- `lab2/` – Second tutorial tasks.
+- `lab3/` – Third tutorial tasks.
 - And so on...
 
 ---
@@ -29,4 +30,4 @@ handling, text justification, email extraction, date formatting, and unique subs
 
 ## 📄 License
 
-This project is open-source and free to use under the MIT License.
+This repository is open-source and free to use under the MIT License.
