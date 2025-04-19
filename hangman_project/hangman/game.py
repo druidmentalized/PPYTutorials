@@ -1,65 +1,67 @@
+from colorama import Fore
+
+from .ui import UI
 from .config_loader import get_attempts_for_difficulty
 from .word_provider import get_random_word
 
-def choose_difficulty():
-    print("Please choose difficulty:")
-    print("1) easy -- 10 attempts")
-    print("2) medium -- 6 attempts")
-    print("3) hard -- 4 attempts")
-
-    choice = input("Your choice (1/2/3): ").strip()
-    difficulty_map = {
-        "1": "easy",
-        "2": "medium",
-        "3": "hard"
-    }
-    if choice not in difficulty_map:
-        print("Invalid choice. Defaulting to medium difficulty.")
-    return difficulty_map.get(choice, "medium")
+def choose_difficulty(ui: UI) -> str:
+    ui.display_difficulty_menu()
+    choice = ui.prompt_difficulty_choice()
+    mapping = {"1": "easy", "2": "medium", "3": "hard"}
+    difficulty = mapping.get(choice)
+    if difficulty is None:
+        ui.notify_invalid_difficulty()
+        difficulty = "medium"
+    return difficulty
 
 
 class Game:
     def __init__(self):
-        self.word = get_random_word()
-        self.difficulty = choose_difficulty()
+        temp_ui = UI(max_attempts=10)
+        self.difficulty = choose_difficulty(temp_ui)
         self.attempts = get_attempts_for_difficulty(self.difficulty)
+        self.max_attempts = self.attempts
+        self.ui = UI(max_attempts=self.max_attempts)
+
+        self.word = get_random_word()
+        self.wrong_guesses = 0
         self.guessed_letters = set()
-        self.current_guess_state = "_" * len(self.word)
+        self.current_guess_state = '_' * len(self.word)
         self.commands = {
-            "/help": self.command_help,
-            "/quit": self.command_quit,
-            "/status": self.command_status,
-            "/word": self.command_word,
+            '/help': self.ui.display_help,
+            '/quit': self.command_quit,
+            '/status': lambda: self.ui.display_status(
+                self.current_guess_state, self.attempts, self.guessed_letters, self.difficulty
+            ),
+            '/word': lambda: self.ui.display_hidden_word(self.word),
         }
 
     def play(self) -> bool:
-        print("Welcome to the Hangman game!")
-
-        print(f"In your game you'll have {self.attempts} attempts!")
-        print("Type /help to show all available commands")
-
+        self.ui.display_welcome(self.attempts)
         win = False
         while self.attempts > 0 and not win:
-            print(f"Current guess: {self.current_guess_state}")
-            print(f"Attempts left: {self.attempts}")
-            user_guess = input("Guess a letter: ").strip().lower()
+            self.ui.display_current_guess(self.current_guess_state)
+            self.ui.display_attempts_left(self.attempts)
+            guess = self.ui.prompt_guess()
 
-            if user_guess.startswith("/"):
-                should_decrease = self.handle_command(user_guess)
-
-            elif user_guess.isalpha():
+            if guess.startswith('/'):
+                self.commands.get(
+                    guess.lower(),
+                    lambda: print(Fore.RED + "Invalid command. Type /help to see all available commands")
+                )()
+                should_decrease = False
+            elif guess.isalpha():
                 should_decrease = (
-                    self.handle_letter(user_guess)
-                    if len(user_guess) == 1
-                    else self.handle_word(user_guess)
+                    self.handle_letter(guess) if len(guess) == 1 else self.handle_word(guess)
                 )
-
             else:
-                print("Please enter a single letter, word or command starting with '/'.")
+                self.ui.notify_invalid_input()
                 should_decrease = False
 
             if should_decrease:
                 self.attempts -= 1
+                self.wrong_guesses += 1
+                self.ui.display_ascii_art(self.wrong_guesses)
 
             if self.current_guess_state == self.word:
                 win = True
@@ -89,7 +91,7 @@ class Game:
         if user_guess in self.word:
             new_guess_state = ""
             for i, char in enumerate(self.word):
-                if char == user_guess or char == self.current_guess_state[i]:
+                if char == user_guess or self.current_guess_state[i] != "_":
                     new_guess_state += char
                 else:
                     new_guess_state += "_"
@@ -115,12 +117,14 @@ class Game:
     def handle_lose(self):
         print("Sorry, you weren't able to guess the word.")
         print(f"The word was: {self.word}")
+        total = len(self.word)
         missing_letters = self.current_guess_state.count('_')
-        print(f"You guessed {len(self.word) - missing_letters} out of {len(self.word)} letters correctly.")
+        correct = total - missing_letters
+        print(f"You guessed {correct} out of {total} letter{'s' if correct != 1 else ''} correctly.")
 
     # Commands
     def command_help(self):
-        print("📘 Available commands:")
+        print("Available commands:")
         for cmd, desc in {
             "/help": "Show this help message",
             "/quit": "Quit the current game",
