@@ -54,8 +54,13 @@ Please choose difficulty:
 2) medium -- 6 attempts
 3) hard -- 4 attempts
 Your choice (1/2/3): 3
+Please choose strictness:
+1) Strict -- attempts decreased for every guess
+2) Moderate -- attempts decreased only for incorrect guesses
+Your choice (1/2): 2
 Welcome to the Hangman game!
 You have 4 attempts.
+Your game mode is 'Moderate'.
 Type /help to show all available commands
 --------------------------------------------------
 Current guess: ______
