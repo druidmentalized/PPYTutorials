@@ -14,6 +14,7 @@ class Game:
 
         self.word = get_random_word()
         self.wrong_guesses = 0
+        self.is_strict = self.choose_strictness()
         self.guessed_letters = set()
         self.current_guess_state = '_' * len(self.word)
         self.commands = {
@@ -38,8 +39,22 @@ class Game:
             return "medium"
         return difficulty
 
+    def choose_strictness(self) -> bool:
+        mapping = {
+            "1": True,
+            "2": False
+        }
+
+        self.ui.display_strictness_menu()
+        choice = self.ui.prompt_strictness_choice()
+        is_strict = mapping.get(choice)
+        if is_strict is None:
+            self.ui.notify_invalid_strictness()
+            return False
+        return is_strict
+
     def play(self) -> bool:
-        self.ui.display_welcome(self.attempts)
+        self.ui.display_welcome(self.attempts, self.is_strict)
         win = False
         while self.attempts > 0 and not win:
             self.ui.display_current_guess(self.current_guess_state, self.attempts)
@@ -50,9 +65,11 @@ class Game:
                 should_decrease = False
             elif guess.isalpha():
                 should_decrease = (self.handle_letter(guess) if len(guess) == 1 else self.handle_word(guess))
+                if self.is_strict:
+                    should_decrease = True
             else:
                 self.ui.notify_invalid_input()
-                should_decrease = False
+                should_decrease = (False if self.is_strict else True)
 
             if should_decrease:
                 self.attempts -= 1

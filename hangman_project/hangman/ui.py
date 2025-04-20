@@ -19,12 +19,13 @@ class UI:
         hangman = load_ascii_stage(wrong_guesses, self.max_attempts)
         print(Fore.LIGHTRED_EX + f"{hangman}")
 
-    def display_welcome(self, attempts: int):
+    def display_welcome(self, attempts: int, is_strict: bool):
         print(Fore.LIGHTGREEN_EX + Style.BRIGHT + "Welcome to the Hangman game!")
         print(Fore.LIGHTYELLOW_EX + f"You have {attempts} attempts.")
+        print(Fore.LIGHTYELLOW_EX + f"Your game mode is '{("Strict" if is_strict else "Moderate")}'.")
         print(Style.DIM + "Type /help to show all available commands")
 
-    # Difficulty choice
+    # Difficulty & Strictness choice
     def display_difficulty_menu(self):
         print(Fore.LIGHTGREEN_EX + "Please choose difficulty:")
         print(f"1) easy -- 10 attempts")
@@ -36,6 +37,17 @@ class UI:
 
     def notify_invalid_difficulty(self):
         print(Fore.LIGHTRED_EX + "Invalid choice. Defaulting to medium difficulty.")
+
+    def display_strictness_menu(self):
+        print(Fore.LIGHTGREEN_EX + "Please choose strictness:")
+        print(f"1) Strict -- attempts decreased for every guess")
+        print(f"2) Moderate -- attempts decreased only for incorrect guesses")
+
+    def prompt_strictness_choice(self) -> str:
+        return input(Fore.LIGHTGREEN_EX + "Your choice (1/2): " + Style.RESET_ALL).strip()
+
+    def notify_invalid_strictness(self):
+        return print(Fore.LIGHTRED_EX + "Invalid choice. Defaulting to moderate strictness.")
 
     # Game messages
     def display_current_guess(self, current: str, attempts: int):
