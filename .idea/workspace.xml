@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Added strictness setting to the game">
-      <change beforePath="$PROJECT_DIR$/hangman_project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/README.md" afterDir="false" />
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Update README">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_project/hangman/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangman_project/hangman/ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -160,7 +162,11 @@
       <workItem from="1745010240464" duration="8833000" />
       <workItem from="1745074268944" duration="434000" />
       <workItem from="1745077766308" duration="5859000" />
-      <workItem from="1745177534651" duration="1271000" />
+      <workItem from="1745177534651" duration="1399000" />
+      <workItem from="1745773433078" duration="154000" />
+      <workItem from="1745913876559" duration="1235000" />
+      <workItem from="1745920972899" duration="212000" />
+      <workItem from="1745921189508" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -330,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745178758527</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update README">
+      <option name="closed" value="true" />
+      <created>1745178926012</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1745178926012</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,13 +373,13 @@
     <MESSAGE value="Added getting of the random word from the txt file" />
     <MESSAGE value="Main game logic created and written" />
     <MESSAGE value="Big UI update. Still needs testing and debugging" />
-    <MESSAGE value="Update README" />
     <MESSAGE value="Little updates in decoupling game logic from the ui. Hangman images taken out into separate directory" />
     <MESSAGE value="Fixes in some of the hangman models, correct attempt passing to the ui class added" />
     <MESSAGE value="Color changes + last hangman model improvement" />
     <MESSAGE value="READMEs(whole projects' + game's) update" />
     <MESSAGE value="Added strictness setting to the game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added strictness setting to the game" />
+    <MESSAGE value="Update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
@@ -386,7 +400,7 @@
     <SUITE FILE_PATH="coverage/PythonProject$ex_14.coverage" NAME="ex_14 Coverage Results" MODIFIED="1742340133927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_11.coverage" NAME="ex_11 Coverage Results" MODIFIED="1744388173392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_16.coverage" NAME="ex_16 Coverage Results" MODIFIED="1744708943093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1745178772448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
+    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1745914695886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_advanced.coverage" NAME="ex_advanced Coverage Results" MODIFIED="1743682533373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_1.coverage" NAME="ex_1 Coverage Results" MODIFIED="1744386665033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1742339708294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />

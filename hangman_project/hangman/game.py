@@ -1,4 +1,4 @@
-from .ui import *
+from hangman_project.hangman.ui import UI
 from .config_loader import get_attempts_for_difficulty
 from .word_provider import get_random_word
 
@@ -57,62 +57,76 @@ class Game:
         self.ui.display_welcome(self.attempts, self.is_strict)
         win = False
         while self.attempts > 0 and not win:
-            self.ui.display_current_guess(self.current_guess_state, self.attempts)
-            guess = self.ui.prompt_guess()
-
-            if guess.startswith('/'):
-                self.handle_command(guess)
-                should_decrease = False
-            elif guess.isalpha():
-                should_decrease = (self.handle_letter(guess) if len(guess) == 1 else self.handle_word(guess))
-                if self.is_strict:
-                    should_decrease = True
-            else:
-                self.ui.notify_invalid_input()
-                should_decrease = (False if self.is_strict else True)
-
-            if should_decrease:
-                self.attempts -= 1
-                self.wrong_guesses += 1
-                self.ui.display_hangman(self.wrong_guesses)
-
-            if self.current_guess_state == self.word:
-                win = True
-
+            win = self.process_user_guess()
         if win:
             self.handle_win()
         elif self.attempts == 0:
             self.handle_lose()
         return win
 
-    def handle_command(self, user_guess: str) -> bool:
+    def process_user_guess(self) -> bool:
+        self.ui.display_current_guess(self.current_guess_state, self.attempts)
+        guess = self.ui.prompt_guess()
+        guess_type = self.get_guess_type(guess)
+
+        should_decrease = self.handle_guess_logic(guess, guess_type)
+
+        if should_decrease:
+            self.update_after_wrong_guess()
+
+        return self.current_guess_state == self.word
+
+    def get_guess_type(self, guess: str) -> str:
+        if guess.startswith('/'):
+            return "command"
+        elif guess.isalpha():
+            return "letter" if len(guess) == 1 else "word"
+        else:
+            return "invalid"
+
+    def handle_guess_logic(self, guess: str, guess_type: str) -> bool:
+        if guess_type == "command":
+            self.handle_command(guess)
+            return False
+        elif guess_type in {"letter", "word"}:
+            handler = self.handle_letter if guess_type == "letter" else self.handle_word
+            result = handler(guess)
+            return True if self.is_strict else result
+        else:
+            self.ui.notify_invalid_input()
+            return not self.is_strict
+
+    def update_after_wrong_guess(self):
+        self.attempts -= 1
+        self.wrong_guesses += 1
+        self.ui.display_hangman(self.wrong_guesses)
+
+    def handle_command(self, user_guess: str):
         command = self.commands.get(user_guess.lower())
         if command:
             command()
-            return False
         else:
             self.ui.notify_incorrect_command()
-            return False
 
-    def handle_letter(self, user_guess: str) -> bool:
-        if user_guess in self.guessed_letters:
+    def handle_letter(self, guess: str) -> bool:
+        if guess in self.guessed_letters:
             self.ui.notify_already_guessed()
             return False
 
-        self.guessed_letters.add(user_guess)
+        self.guessed_letters.add(guess)
 
-        if user_guess in self.word:
-            new_guess_state = ""
-            for i, char in enumerate(self.word):
-                if char == user_guess or self.current_guess_state[i] != "_":
-                    new_guess_state += char
-                else:
-                    new_guess_state += "_"
-            self.current_guess_state = new_guess_state
+        if guess in self.word:
+            self.reveal_letter(guess)
             return False
         else:
             self.ui.notify_incorrect_letter()
             return True
+
+    def reveal_letter(self, guess: str):
+        self.current_guess_state = "".join(
+            c if c == guess or g != "_" else "_"
+            for c, g in zip(self.word, self.current_guess_state)
+        )
 
     def handle_word(self, user_guess: str) -> bool:
         if user_guess == self.word:

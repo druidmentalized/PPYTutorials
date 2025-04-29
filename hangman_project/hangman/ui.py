@@ -28,9 +28,9 @@ class UI:
     # Difficulty & Strictness choice
     def display_difficulty_menu(self):
         print(Fore.LIGHTGREEN_EX + "Please choose difficulty:")
-        print(f"1) easy -- 10 attempts")
-        print(f"2) medium -- 6 attempts")
-        print(f"3) hard -- 4 attempts")
+        print("1) easy -- 10 attempts")
+        print("2) medium -- 6 attempts")
+        print("3) hard -- 4 attempts")
 
     def prompt_difficulty_choice(self) -> str:
         return input(Fore.LIGHTGREEN_EX + "Your choice (1/2/3): " + Style.RESET_ALL).strip()
@@ -40,8 +40,8 @@ class UI:
 
     def display_strictness_menu(self):
         print(Fore.LIGHTGREEN_EX + "Please choose strictness:")
-        print(f"1) Strict -- attempts decreased for every guess")
-        print(f"2) Moderate -- attempts decreased only for incorrect guesses")
+        print("1) Strict -- attempts decreased for every guess")
+        print("2) Moderate -- attempts decreased only for incorrect guesses")
 
     def prompt_strictness_choice(self) -> str:
         return input(Fore.LIGHTGREEN_EX + "Your choice (1/2): " + Style.RESET_ALL).strip()
