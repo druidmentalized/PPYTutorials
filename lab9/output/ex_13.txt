@@ -1,0 +1,5 @@
+info: hello
+error: crash
+Generator exited
+Generator exited
+Generator exited

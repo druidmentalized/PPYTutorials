@@ -1,0 +1,3 @@
+error: something failed
+critical: error occurred again
+Generator exited

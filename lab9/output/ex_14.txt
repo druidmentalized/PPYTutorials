@@ -1,0 +1,31 @@
+Received: 0, avg: 0.0
+sent: None
+Received: 5, avg: 2.5
+sent: None
+Received: 10, avg: 5.0
+sent: None
+Received: 15, avg: 7.5
+sent: None
+Received: 20, avg: 10.0
+sent: None
+Received: 25, avg: 12.5
+sent: None
+Received: 30, avg: 15.0
+sent: None
+Received: 35, avg: 17.5
+sent: None
+Received: 40, avg: 20.0
+sent: None
+Received: 45, avg: 22.5
+sent: None
+Received: 50, avg: 25.0
+sent: None
+Received: 55, avg: 27.5
+sent: None
+Received: 60, avg: 30.0
+sent: None
+Received: 65, avg: 32.5
+sent: None
+Received: 70, avg: 35.0
+sent: None
+Stats complete
