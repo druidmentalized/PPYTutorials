@@ -1,0 +1,5 @@
+Average score: 85.75
+Bob scored above the average with 92.00 points.
+Diana scored above the average with 88.00 points.
+Max score: 92.00
+Bob has the highest score

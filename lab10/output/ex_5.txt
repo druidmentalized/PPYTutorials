@@ -1,0 +1,1 @@
+{'digits': 3, 'letters': 10, 'spaces': 2, 'other': 2}
