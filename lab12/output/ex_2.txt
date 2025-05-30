@@ -1,0 +1,3 @@
+21
+Temperature in farenheit: 69.8
+Temperature in Kelvin: -252.14999999999998

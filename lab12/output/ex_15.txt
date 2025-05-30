@@ -1,0 +1,7 @@
+Grade of Good is fine.
+Traceback (most recent call last):
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_15.py", line 20, in <module>
+    bad_student.check_grade()
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_15.py", line 11, in check_grade
+    raise GradeTooLowError("Grade of checked student is too low.")
+GradeTooLowError: Grade of checked student is too low.

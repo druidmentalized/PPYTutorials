@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="All tasks completed">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Lab 10 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_project.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +92,11 @@
       <recent name="$PROJECT_DIR$/Lab1/source" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab12/source/ex_11" />
       <recent name="$PROJECT_DIR$/lab9/source/ex_15" />
       <recent name="$PROJECT_DIR$/lab9/source/ex_4" />
       <recent name="$PROJECT_DIR$/hangman_project" />
       <recent name="$PROJECT_DIR$/Tests" />
-      <recent name="$PROJECT_DIR$/Lab4Danya" />
     </key>
   </component>
   <component name="RunManager">
@@ -172,7 +174,10 @@
       <workItem from="1747218768110" duration="1745000" />
       <workItem from="1747342034921" duration="2343000" />
       <workItem from="1747347269016" duration="17000" />
-      <workItem from="1747410360018" duration="1854000" />
+      <workItem from="1747410360018" duration="1963000" />
+      <workItem from="1747413376434" duration="462000" />
+      <workItem from="1747954442960" duration="323000" />
+      <workItem from="1748619086793" duration="5426000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -382,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747346312845</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Lab 10 completed">
+      <option name="closed" value="true" />
+      <created>1747412302814</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747412302814</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,46 +434,47 @@
     <MESSAGE value="First 10 tasks completed" />
     <MESSAGE value="Extra exercise made" />
     <MESSAGE value="All tasks completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="All tasks completed" />
+    <MESSAGE value="Lab 10 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 10 completed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_8.coverage" NAME="ex_8 Coverage Results" MODIFIED="1747219625048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_8.coverage" NAME="ex_8 Coverage Results" MODIFIED="1748621369104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_3.coverage" NAME="ex_3 Coverage Results" MODIFIED="1742339173661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_2.coverage" NAME="ex_2 Coverage Results" MODIFIED="1747411687353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_2.coverage" NAME="ex_2 Coverage Results" MODIFIED="1748619826000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_11.coverage" NAME="ex_11 Coverage Results" MODIFIED="1742339792647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_12.coverage" NAME="ex_12 Coverage Results" MODIFIED="1742339866537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_13.coverage" NAME="ex_13 Coverage Results" MODIFIED="1747345380762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_13.coverage" NAME="ex_13 Coverage Results" MODIFIED="1748622824281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_15.coverage" NAME="ex_15 Coverage Results" MODIFIED="1742340209981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1747220465527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1748621955498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_6.coverage" NAME="ex_6 Coverage Results" MODIFIED="1742339332657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex14.coverage" NAME="ex14 Coverage Results" MODIFIED="1747345639592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_3.coverage" NAME="ex_3 Coverage Results" MODIFIED="1747411530768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1747219747873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_6.coverage" NAME="ex_6 Coverage Results" MODIFIED="1747412112033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_3.coverage" NAME="ex_3 Coverage Results" MODIFIED="1748619967230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1748621517432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_6.coverage" NAME="ex_6 Coverage Results" MODIFIED="1748621235941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_17.coverage" NAME="ex_17 Coverage Results" MODIFIED="1742340548070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_8.coverage" NAME="ex_8 Coverage Results" MODIFIED="1742339543356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_14.coverage" NAME="ex_14 Coverage Results" MODIFIED="1742340133927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_11.coverage" NAME="ex_11 Coverage Results" MODIFIED="1747342889892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_16.coverage" NAME="ex_16 Coverage Results" MODIFIED="1747346152743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1747411196931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_11.coverage" NAME="ex_11 Coverage Results" MODIFIED="1748622167427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source/ex_11" />
+    <SUITE FILE_PATH="coverage/PPYTasks$RunHangman.coverage" NAME="RunHangman Coverage Results" MODIFIED="1748619477487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hangman_project" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_advanced.coverage" NAME="ex_advanced Coverage Results" MODIFIED="1743682533373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab4/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_1.coverage" NAME="ex_1 Coverage Results" MODIFIED="1747411231387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_1.coverage" NAME="ex_1 Coverage Results" MODIFIED="1748619484393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1742339708294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_16.coverage" NAME="ex_16 Coverage Results" MODIFIED="1742340280441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_13.coverage" NAME="ex_13 Coverage Results" MODIFIED="1742339909844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_5.coverage" NAME="ex_5 Coverage Results" MODIFIED="1742339288036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_4.coverage" NAME="ex_4 Coverage Results" MODIFIED="1747411602798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_14.coverage" NAME="ex_14 Coverage Results" MODIFIED="1744389620490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_4.coverage" NAME="ex_4 Coverage Results" MODIFIED="1748620376099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_14.coverage" NAME="ex_14 Coverage Results" MODIFIED="1748623125078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_17.coverage" NAME="ex_17 Coverage Results" MODIFIED="1747346245903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_7.coverage" NAME="ex_7 Coverage Results" MODIFIED="1747219117977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_7.coverage" NAME="ex_7 Coverage Results" MODIFIED="1748620969536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_2.coverage" NAME="ex_2 Coverage Results" MODIFIED="1742339079527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_4.coverage" NAME="ex_4 Coverage Results" MODIFIED="1742339216663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_7.coverage" NAME="ex_7 Coverage Results" MODIFIED="1742339374895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_15.coverage" NAME="ex_15 Coverage Results" MODIFIED="1747346003146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source/ex_15" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_15.coverage" NAME="ex_15 Coverage Results" MODIFIED="1748623290320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_18.coverage" NAME="ex_18 Coverage Results" MODIFIED="1744399562104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab6/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_12.coverage" NAME="ex_12 Coverage Results" MODIFIED="1747345091328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_12.coverage" NAME="ex_12 Coverage Results" MODIFIED="1748622436556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_1.coverage" NAME="ex_1 Coverage Results" MODIFIED="1742338985703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$ex_5.coverage" NAME="ex_5 Coverage Results" MODIFIED="1747411910918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab10/source" />
+    <SUITE FILE_PATH="coverage/PPYTasks$ex_5.coverage" NAME="ex_5 Coverage Results" MODIFIED="1748620492125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
   </component>
 </project>

@@ -1,0 +1,3 @@
+Circle area: 706.8583470577034
+Rectangle area: 100
+Rectangle area: 50

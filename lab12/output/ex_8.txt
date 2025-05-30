@@ -1,0 +1,8 @@
+Passed
+Traceback (most recent call last):
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_8.py", line 12, in <module>
+    raise_if_negative(-100)   # Raises NegativeNumberError
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_8.py", line 6, in raise_if_negative
+    raise NegativeNumberError("Number should be positive!")
+NegativeNumberError: Number should be positive!

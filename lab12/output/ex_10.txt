@@ -1,0 +1,2 @@
+Good division: 2.5
+Zero division: 0

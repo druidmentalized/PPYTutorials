@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_9.py", line 12, in <module>
+    product_bad = Product("MinusPiProduct", -3.14)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_9.py", line 7, in __init__
+    raise InvalidPriceError("Price must be over 0!")
+InvalidPriceError: Price must be over 0!

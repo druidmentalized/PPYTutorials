@@ -1,0 +1,5 @@
+Enter your age: 14
+Age of integer is: Fine
+Enter your age: string
+Invalid input.
+Age of string is: Not fine

@@ -1,0 +1,8 @@
+Money were successfully withdrawn.
+Money were successfully deposited.
+Traceback (most recent call last):
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_12.py", line 23, in <module>
+    acc.withdraw(10000)
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_12.py", line 11, in withdraw
+    raise InsufficientFundsError("You can't withdraw more than you have!")
+InsufficientFundsError: You can't withdraw more than you have!

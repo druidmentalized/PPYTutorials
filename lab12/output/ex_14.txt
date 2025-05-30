@@ -1,0 +1,12 @@
+Operations with number 5 and 2:
+Sum: 7
+Subtraction: 3
+Multiplying: 10
+Division: 2.5
+Traceback (most recent call last):
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_14.py", line 24, in <module>
+    print(f"Unsupported: {Calculator.calculate(5, 2, "max")}")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dmitriy/PycharmProjects/PPYTasks/lab12/source/ex_14.py", line 17, in calculate
+    raise InvalidOperationError
+InvalidOperationError
