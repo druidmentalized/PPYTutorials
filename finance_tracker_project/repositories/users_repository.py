@@ -4,7 +4,7 @@ from typing import Any
 from finance_tracker_project.models.user_account import UserAccount
 
 
-class UserRepository:
+class UsersRepository:
     def __init__(self, path="finance_tracker_project/data/index.json"):
         self.path = path
 
