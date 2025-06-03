@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Small refinements">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Confid file, password hashing added">
+      <change afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/auth_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/models/bank_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/models/bank_account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/models/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/models/transaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/models/user_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/models/user_account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/repositories/users_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/repositories/users_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auth_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/auth_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/utils/hash_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/utils/hash_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/session_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/session_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auth_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/summary.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/report_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,59 +50,84 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.RunHangman.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex14.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_10.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_11.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_12.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_13.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_14.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_15.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_16.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_17.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_18.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_8.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_9.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex_advanced.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dmitriy/PycharmProjects/PPYTasks/Lab4/source&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.RunHangman.executor": "Run",
+    "Python.ex14.executor": "Run",
+    "Python.ex_1.executor": "Run",
+    "Python.ex_10.executor": "Run",
+    "Python.ex_11.executor": "Run",
+    "Python.ex_12.executor": "Run",
+    "Python.ex_13.executor": "Run",
+    "Python.ex_14.executor": "Run",
+    "Python.ex_15.executor": "Run",
+    "Python.ex_16.executor": "Run",
+    "Python.ex_17.executor": "Run",
+    "Python.ex_18.executor": "Run",
+    "Python.ex_2.executor": "Run",
+    "Python.ex_3.executor": "Run",
+    "Python.ex_4.executor": "Run",
+    "Python.ex_5.executor": "Run",
+    "Python.ex_6.executor": "Run",
+    "Python.ex_7.executor": "Run",
+    "Python.ex_8.executor": "Run",
+    "Python.ex_9.executor": "Run",
+    "Python.ex_advanced.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/dmitriy/PycharmProjects/PPYTasks/finance_tracker_project/controllers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/finance_tracker_project/controllers" />
       <recent name="$PROJECT_DIR$/Lab4/source" />
       <recent name="$PROJECT_DIR$/Lab1/output" />
       <recent name="$PROJECT_DIR$/Lab1/source" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/finance_tracker_project/controllers" />
       <recent name="$PROJECT_DIR$/finance_tracker_project/config" />
       <recent name="$PROJECT_DIR$/finance_tracker_project/enums" />
       <recent name="$PROJECT_DIR$/lab12/source/ex_11" />
       <recent name="$PROJECT_DIR$/lab9/source/ex_15" />
-      <recent name="$PROJECT_DIR$/lab9/source/ex_4" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.RunFinanceTracker">
+    <configuration name="RunFinanceTracker" type="PythonConfigurationType" factoryName="Python">
+      <module name="PPYTasks" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance_tracker_project" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance_tracker_project/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="RunHangman" type="PythonConfigurationType" factoryName="Python">
       <module name="PPYTasks" />
       <option name="ENV_FILES" value="" />
@@ -128,6 +152,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.RunHangman" />
+      <item itemvalue="Python.RunFinanceTracker" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -185,7 +213,7 @@
       <workItem from="1748639962969" duration="58000" />
       <workItem from="1748866596993" duration="160000" />
       <workItem from="1748901585359" duration="4943000" />
-      <workItem from="1748960508519" duration="3174000" />
+      <workItem from="1748960508519" duration="6574000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -435,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748905934437</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Confid file, password hashing added">
+      <option name="closed" value="true" />
+      <created>1748963894951</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748963894951</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create README.md" />
     <MESSAGE value="Lab 4 tasks set completed" />
     <MESSAGE value="Advanced level task from Tutorial 4 completed" />
     <MESSAGE value="Partially made tasks from Lab6" />
@@ -478,7 +513,8 @@
     <MESSAGE value="Initial commit for &quot;Person Finance Tracker&quot; 2nd semester project" />
     <MESSAGE value="Added basic data loading and model filling" />
     <MESSAGE value="Small refinements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small refinements" />
+    <MESSAGE value="Confid file, password hashing added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Confid file, password hashing added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />

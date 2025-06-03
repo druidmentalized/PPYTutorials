@@ -1,8 +1,8 @@
-from finance_tracker_project.services.auth_manager import AuthManager
+from finance_tracker_project.controllers.auth_controller import AuthController
 
 
 def main():
-    AuthManager().run()
+    AuthController().run()
 
 if __name__ == '__main__':
     main()
