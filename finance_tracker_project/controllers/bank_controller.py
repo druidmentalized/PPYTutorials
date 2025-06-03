@@ -1,5 +1,6 @@
 from finance_tracker_project.dependencies import report_service
 from finance_tracker_project.models.bank_account import BankAccount
+from finance_tracker_project.models.user_account import UserAccount
 
 
 class BankController:
@@ -32,6 +33,9 @@ class BankController:
                 break
             else:
                 print("Invalid choice. Try again.")
+
+    def create_bank_account(self, user: UserAccount):
+        ...
 
     def show_balance(self, account: BankAccount):
         ...

@@ -1,4 +1,5 @@
 from finance_tracker_project.dependencies import auth_service, session_controller
+from finance_tracker_project.models.user_account import UserAccount
 
 from finance_tracker_project.utils.utils import clear_screen
 
@@ -18,13 +19,24 @@ class AuthController:
             print("e. Exit")
             choice = input("Choose an option: ")
             if choice == "1":
-                user = self.auth_service.login(users_list)
+                user = self.login(users_list)
                 if user:
                     self.session_controller.run_session(user)
             elif choice == "2":
-                user = self.auth_service.register()
+                user = self.register()
                 if user:
                     self.session_controller.run_session(user)
             elif choice == "e":
                 break
             clear_screen()
+
+    def login(self, users_list: list[dict]) -> UserAccount | None:
+        username = input("Username: ")
+        password = input("Password: ")
+        return self.auth_service.login(username, password, users_list)
+
+    def register(self) -> UserAccount | None:
+        username = input("Username: ")
+        password = input("Password: ")
+        confirm_password = input("Confirm Password: ")
+        return self.auth_service.register(username, password, confirm_password)

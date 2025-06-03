@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Confid file, password hashing added">
-      <change afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/auth_controller.py" afterDir="false" />
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/auth_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/bank_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/bank_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/session_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/session_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auth_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/summary.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/report_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/auth_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1748639962969" duration="58000" />
       <workItem from="1748866596993" duration="160000" />
       <workItem from="1748901585359" duration="4943000" />
-      <workItem from="1748960508519" duration="6574000" />
+      <workItem from="1748960508519" duration="7496000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -471,7 +470,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748963894951</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made">
+      <option name="closed" value="true" />
+      <created>1748967650336</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1748967650336</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made">
+      <option name="closed" value="true" />
+      <created>1748967662248</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1748967662248</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lab 4 tasks set completed" />
     <MESSAGE value="Advanced level task from Tutorial 4 completed" />
     <MESSAGE value="Partially made tasks from Lab6" />
     <MESSAGE value="Lab 6: all basic + additional tasks completed" />
@@ -514,7 +528,8 @@
     <MESSAGE value="Added basic data loading and model filling" />
     <MESSAGE value="Small refinements" />
     <MESSAGE value="Confid file, password hashing added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Confid file, password hashing added" />
+    <MESSAGE value="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />

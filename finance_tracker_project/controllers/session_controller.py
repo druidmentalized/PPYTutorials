@@ -20,7 +20,7 @@ class SessionController:
             if choice == "1":
                 self.enter_bank_account(user)
             elif choice == "2":
-                self.create_bank_account(user)
+                self.bank_controller.create_bank_account(user)
             elif choice == "3":
                 self.report_service.generate_spending_report(user.bank_accounts)
             elif choice == "4":
@@ -48,7 +48,3 @@ class SessionController:
                 print("Invalid choice. Please try again.")
         except ValueError:
             print("Invalid input. Please enter a number.")
-
-
-    def create_bank_account(self, user: UserAccount):
-        ...

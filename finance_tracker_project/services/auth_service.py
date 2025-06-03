@@ -11,32 +11,28 @@ class AuthService:
     def load_users_index(self):
         return self.users_repo.load_users_index()
 
-    def login(self, users_list: list[dict]) -> UserAccount | None:
-        usr_login = input("Login: ")
-        password_hash = Hasher.hash_password(input("Password: "))
+    def login(self, username: str, password: str, users_list: list[dict]) -> UserAccount | None:
+        password_hash = Hasher.hash_password(password)
 
         for user in users_list:
-            if user[LOGIN] == usr_login and user[PASSWORD_HASH] == password_hash:
-                return self.users_repo.load_user_profile(usr_login)
+            if user[LOGIN] == username and user[PASSWORD_HASH] == password_hash:
+                return self.users_repo.load_user_profile(username)
 
         print("Login failed. Please try again.")
         return None
 
 
-    def register(self) -> UserAccount | None:
-        login = input("Login: ")
-        password = input("Password: ")
-        confirm = input("Confirm password: ")
-        if password != confirm:
+    def register(self, username: str, password: str, confirm_password: str) -> UserAccount | None:
+        if password != confirm_password:
             print("Passwords do not match.")
             return None
         password_hash = Hasher.hash_password(password)
 
-        if any(user[LOGIN] == login for user in self.users_repo.load_users_index()):
+        if any(user[LOGIN] == username for user in self.users_repo.load_users_index()):
             print("User already exists.")
             return None
 
-        new_user = UserAccount(login, password_hash)
+        new_user = UserAccount(username, password_hash)
         self.users_repo.add_user_to_index(new_user)
         self.users_repo.save_user_profile(new_user)
         return new_user
