@@ -1,3 +1,4 @@
+from finance_tracker_project.config.config import ACCOUNT_NAME, CURRENCY, TRANSACTIONS
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.transaction import Transaction
 
@@ -12,7 +13,7 @@ class BankAccount:
     @staticmethod
     def from_dict(bank_dict: dict) -> "BankAccount":
         return BankAccount(
-            name=bank_dict["name"],
-            currency=Currency([bank_dict["currency"]]),
-            transactions=[Transaction.from_dict(t) for t in bank_dict.get("transactions", [])],
+            name=bank_dict[ACCOUNT_NAME],
+            currency=Currency([bank_dict[CURRENCY]]),
+            transactions=[Transaction.from_dict(t) for t in bank_dict.get(TRANSACTIONS, [])],
         )

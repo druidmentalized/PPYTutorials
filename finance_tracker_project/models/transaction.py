@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from finance_tracker_project.config.config import AMOUNT, DATE, CATEGORY, DESCRIPTION, TRANSACTION_TYPE, DATE_FORMAT
 from finance_tracker_project.enums.category import Category
 
 
@@ -14,9 +15,9 @@ class Transaction:
     @staticmethod
     def from_dict(transaction_dict: dict) -> "Transaction":
         return Transaction(
-            amount=transaction_dict["amount"],
-            date=transaction_dict["date"],
-            category=transaction_dict["category"],
-            description=transaction_dict["description"],
-            transaction_type=transaction_dict["transaction_type"],
+            amount=transaction_dict[AMOUNT],
+            date=datetime.strptime(transaction_dict[DATE], DATE_FORMAT),
+            category=Category(transaction_dict[CATEGORY]),
+            description=transaction_dict[DESCRIPTION],
+            transaction_type=transaction_dict[TRANSACTION_TYPE],
         )
