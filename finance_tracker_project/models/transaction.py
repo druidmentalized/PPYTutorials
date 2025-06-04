@@ -21,3 +21,13 @@ class Transaction:
             description=transaction_dict[DESCRIPTION],
             transaction_type=transaction_dict[TRANSACTION_TYPE],
         )
+
+    @staticmethod
+    def to_dict(transaction: "Transaction") -> dict:
+        return {
+            AMOUNT: transaction.amount,
+            DATE: transaction.date.strftime(DATE_FORMAT),
+            CATEGORY: transaction.category.value,
+            DESCRIPTION: transaction.description,
+            TRANSACTION_TYPE: transaction.transaction_type,
+        }

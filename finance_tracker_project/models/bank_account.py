@@ -15,7 +15,16 @@ class BankAccount:
     def from_dict(bank_dict: dict) -> "BankAccount":
         return BankAccount(
             name=bank_dict[ACCOUNT_NAME],
-            currency=Currency([bank_dict[CURRENCY]]),
+            currency=Currency(bank_dict[CURRENCY]),
             balance=bank_dict[BALANCE],
             transactions=[Transaction.from_dict(t) for t in bank_dict.get(TRANSACTIONS, [])],
         )
+
+    @staticmethod
+    def to_dict(bank_account: "BankAccount") -> dict:
+        return {
+            ACCOUNT_NAME: bank_account.name,
+            CURRENCY: bank_account.currency,
+            BALANCE: bank_account.balance,
+            TRANSACTIONS: [Transaction.to_dict(transaction) for transaction in bank_account.transactions],
+        }

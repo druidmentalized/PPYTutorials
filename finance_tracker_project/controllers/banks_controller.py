@@ -12,7 +12,7 @@ class BanksController:
         self.report_service = reports_service
         self.bank_service = banks_service
 
-    def run_bank_session(self, account: BankAccount):
+    def run_bank_session(self, user: UserAccount, account: BankAccount):
         while True:
             print(f"\n-- {account.name} ({account.currency.name}) --")
             print("1. View balance")
@@ -21,12 +21,12 @@ class BanksController:
             print("4. Generate spending report.")
             print("5. Generate category spending report.")
             print("e. Back to main menu")
-            choice = input("Choose an option: ")S
+            choice = input("Choose an option: ")
 
             if choice == "1":
                 self.show_balance(account)
             elif choice == "2":
-                self.transaction_controller.add_transaction(account)
+                self.transaction_controller.add_transaction(user, account)
             elif choice == "3":
                 self.view_transactions(account)
             elif choice == "4":

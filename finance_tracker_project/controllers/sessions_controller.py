@@ -43,7 +43,7 @@ class SessionsController:
         try:
             choice = int(input("Choose an account by number: ")) - 1
             if 0 <= choice < len(user.bank_accounts):
-                self.bank_controller.run_bank_session(user.bank_accounts[choice])
+                self.bank_controller.run_bank_session(user, user.bank_accounts[choice])
             else:
                 print("Invalid choice. Please try again.")
         except ValueError:

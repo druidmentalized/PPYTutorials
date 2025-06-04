@@ -30,4 +30,9 @@ class UserAccount:
 
     @staticmethod
     def to_dict(user_account: "UserAccount") -> dict:
-        ...
+        return {
+            LOGIN: user_account.username,
+            PASSWORD_HASH: user_account.password_hash,
+            REGISTRATION_DATE: user_account.registration_date.strftime(DATE_FORMAT),
+            BANK_ACCOUNTS: [BankAccount.to_dict(bank_acc) for bank_acc in user_account.bank_accounts]
+        }
