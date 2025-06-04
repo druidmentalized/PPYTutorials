@@ -1,5 +1,6 @@
 from finance_tracker_project.config.config import PAGE_SIZE
 from finance_tracker_project.dependencies import reports_service, banks_service, transactions_controller
+from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
 
@@ -20,7 +21,7 @@ class BanksController:
             print("4. Generate spending report.")
             print("5. Generate category spending report.")
             print("e. Back to main menu")
-            choice = input("Choose an option: ")
+            choice = input("Choose an option: ")S
 
             if choice == "1":
                 self.show_balance(account)
@@ -40,6 +41,7 @@ class BanksController:
     def create_bank_account(self, user: UserAccount):
         print("-- New Bank Account --")
         bank_name = input("Bank name: ")
+        print("\nSupported currencies:", ", ".join([e.name for e in Currency]))
         currency = input("Currency(abbreviation/sign): ")
         self.bank_service.create_bank_account(user, bank_name, currency)
 

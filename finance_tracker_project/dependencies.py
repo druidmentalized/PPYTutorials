@@ -7,6 +7,7 @@ from finance_tracker_project.services.auths_service import AuthsService
 from finance_tracker_project.services.banks_service import BankAccountsService
 from finance_tracker_project.services.reports_service import ReportsService
 from finance_tracker_project.repositories.users_repository import UsersRepository
+from finance_tracker_project.services.transactions_service import TransactionsService
 
 sessions_controller = SessionsController()
 banks_controller = BanksController()
@@ -14,6 +15,7 @@ transactions_controller = TransactionsController()
 auths_service = AuthsService()
 reports_service = ReportsService()
 banks_service = BankAccountsService()
+transactions_service = TransactionsService()
 users_repo = UsersRepository()
 banks_repo = BanksRepository()
 transactions_repo = TransactionsRepository()

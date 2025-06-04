@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Bank controller written">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Renamed files and classes for plural for overall correctness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/auths_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/bank_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/banks_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/session_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/sessions_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/transaction_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/transactions_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/banks_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/banks_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/transactions_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/transactions_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance_tracker_project/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/auths_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/bank_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/banks_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/report_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/reports_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/storage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/banks_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/banks_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +38,9 @@
     &quot;accountId&quot;: &quot;5b641675-6279-47a3-9184-a65ed9b6dc60&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -219,7 +216,7 @@
       <workItem from="1748866596993" duration="160000" />
       <workItem from="1748901585359" duration="4943000" />
       <workItem from="1748960508519" duration="7790000" />
-      <workItem from="1749039794566" duration="1524000" />
+      <workItem from="1749039794566" duration="3119000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -509,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749040891509</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Renamed files and classes for plural for overall correctness">
+      <option name="closed" value="true" />
+      <created>1749041359900</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1749041359900</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lab 6: all basic + additional tasks completed" />
     <MESSAGE value="Core classes for the Hangman project created" />
     <MESSAGE value="Project creation at the beginning. Difficulty parsing added" />
     <MESSAGE value="Added getting of the random word from the txt file" />
@@ -552,7 +556,8 @@
     <MESSAGE value="Skeletons of base methods added. Basic Controller -&gt; Service -&gt; Repository structure through ServiceLocator made" />
     <MESSAGE value="Little changes to suit even more to SRP" />
     <MESSAGE value="Bank controller written" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bank controller written" />
+    <MESSAGE value="Renamed files and classes for plural for overall correctness" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed files and classes for plural for overall correctness" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
