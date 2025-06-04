@@ -3,6 +3,7 @@ DATA_DIR = "data/"
 USERS_DIR = f"{DATA_DIR}users/"
 INDEX_FILE = f"{DATA_DIR}index.json"
 DATE_FORMAT = "%Y-%m-%d"
+DATE_FORMAT_READABLE = "YYYY-MM-DD"
 SESSION_TIMEOUT = 600
 
 #Default values

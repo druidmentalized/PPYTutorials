@@ -31,3 +31,7 @@ class Transaction(JsonSerializable):
             description=cls.deserialize_value(data[DESCRIPTION]),
             transaction_type=cls.deserialize_value(data[TRANSACTION_TYPE])
         )
+
+    def __str__(self):
+        sign = "+" if self.transaction_type == "+" else "-"
+        return f"{self.date.strftime(DATE_FORMAT)} | {sign}{self.amount:.2f} | {self.category.value} | {self.description}"

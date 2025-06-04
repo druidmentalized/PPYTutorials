@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from finance_tracker_project.config.config import DATE_FORMAT
+from finance_tracker_project.config.config import DATE_FORMAT, DATE_FORMAT_READABLE
 from finance_tracker_project.dependencies import get_transactions_service
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
@@ -18,10 +18,10 @@ class TransactionsController:
             return None
 
         try:
-            user_input = input(f"Transaction date (format {DATE_FORMAT}), blank for today: ")
+            user_input = input(f"Transaction date (format {DATE_FORMAT_READABLE}), blank for today: ")
             date = datetime.strptime(user_input, DATE_FORMAT) if user_input else datetime.today()
         except ValueError:
-            print(f"Invalid date format. Please use {DATE_FORMAT}.")
+            print(f"Invalid date format. Please use {DATE_FORMAT_READABLE}.")
             return None
 
         category = input("Transaction category: ")

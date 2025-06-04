@@ -1,7 +1,10 @@
+from datetime import datetime
+
 from finance_tracker_project.dependencies import get_reports_service, get_banks_service, get_transactions_controller
-from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT
+from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_FORMAT_READABLE
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.bank_account import BankAccount
+from finance_tracker_project.models.transaction import Transaction
 from finance_tracker_project.models.user_account import UserAccount
 
 
@@ -75,15 +78,21 @@ class BanksController:
 
     def view_transactions(self, account: BankAccount):
         transactions = list(reversed(account.transactions))
+
         if not transactions:
             print("No transactions found.")
             return
 
-        total_pages = (len(transactions) - 1) // PAGE_SIZE + 1
+        filtered = self._get_filtered_transactions(transactions)
+
+        if not filtered:
+            return
+
+        total_pages = (len(filtered) - 1) // PAGE_SIZE + 1
         curr_page = 0
 
         while True:
-            self._render_transactions_page(transactions, curr_page)
+            self._render_transactions_page(filtered, curr_page)
             choice = self._get_paging_input()
 
             if choice == "n" and curr_page + 1 >= total_pages:
@@ -96,8 +105,6 @@ class BanksController:
                 curr_page -= 1
             elif choice == "e":
                 break
-            else:
-                continue
 
     def _render_transactions_page(self, transactions: list, curr_page: int):
         start = curr_page * PAGE_SIZE
@@ -111,3 +118,31 @@ class BanksController:
     def _get_paging_input(self) -> str:
         print("\n[n] Next page  |  [p] Previous page  |  [e] Exit")
         return input("Choose an option: ").strip().lower()
+
+    def _get_filtered_transactions(self, transactions: list[Transaction]) -> list[Transaction] | None:
+        print("\n-- Filter Options --")
+        print("Leave any field blank to skip that filter.")
+        date_str = input(f"Filter by date ({DATE_FORMAT_READABLE})(blank to skip): ").strip()
+        tx_type = input("Filter by type (+/-)(blank to skip): ").strip()
+        category = input("Filter by category(blank to skip): ").strip().lower()
+
+        filtered = transactions
+
+        if date_str:
+            try:
+                filter_date = datetime.strptime(date_str, DATE_FORMAT).date()
+                filtered = [tx for tx in filtered if tx.date.date() == filter_date]
+            except ValueError:
+                print("Invalid date format. Skipping date filter.")
+
+        if tx_type in ("+", "-"):
+            filtered = [tx for tx in filtered if tx.transaction_type == tx_type]
+
+        if category:
+            filtered = [tx for tx in filtered if tx.category.value.lower() == category]
+
+        if not filtered:
+            print("No transactions match the filters.")
+            return None
+
+        return filtered
