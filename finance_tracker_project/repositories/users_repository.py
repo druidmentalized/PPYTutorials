@@ -21,14 +21,14 @@ class UsersRepository:
             path = os.path.join(USERS_DIR, f"{username}.json")
             with open(path, "r") as f:
                 data = json.load(f)
-                return UserAccount.from_dict(data)
+                return UserAccount.from_json(data)
         except (FileNotFoundError, json.JSONDecodeError):
             return None
 
     def save_user_profile(self, user: UserAccount) -> None:
         path = os.path.join(USERS_DIR, f"{user.username}.json")
         with open(path, "w") as f:
-            json.dump(UserAccount.to_dict(user), f, indent=2)
+            json.dump(user.to_json(), f, indent=2)
 
     def add_user_to_index(self, user: UserAccount) -> None:
         index_data = self.load_users_index()

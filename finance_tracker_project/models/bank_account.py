@@ -1,9 +1,10 @@
 from finance_tracker_project.config.config import ACCOUNT_NAME, CURRENCY, TRANSACTIONS, BALANCE
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.transaction import Transaction
+from finance_tracker_project.utils.json_serializable import JsonSerializable
 
 
-class BankAccount:
+class BankAccount(JsonSerializable):
 
     def __init__(self, name: str, currency: Currency, balance: float, transactions: list[Transaction]):
         self.name = name
@@ -11,20 +12,19 @@ class BankAccount:
         self.balance = balance
         self.transactions = transactions
 
-    @staticmethod
-    def from_dict(bank_dict: dict) -> "BankAccount":
-        return BankAccount(
-            name=bank_dict[ACCOUNT_NAME],
-            currency=Currency(bank_dict[CURRENCY]),
-            balance=bank_dict[BALANCE],
-            transactions=[Transaction.from_dict(t) for t in bank_dict.get(TRANSACTIONS, [])],
-        )
-
-    @staticmethod
-    def to_dict(bank_account: "BankAccount") -> dict:
+    def to_json(self) -> dict:
         return {
-            ACCOUNT_NAME: bank_account.name,
-            CURRENCY: bank_account.currency,
-            BALANCE: bank_account.balance,
-            TRANSACTIONS: [Transaction.to_dict(transaction) for transaction in bank_account.transactions],
+            ACCOUNT_NAME: self.serialize_value(self.name),
+            CURRENCY: self.serialize_value(self.currency),
+            BALANCE: self.serialize_value(self.balance),
+            TRANSACTIONS: self.serialize_value(self.transactions),
         }
+
+    @classmethod
+    def from_json(cls, data: dict):
+        return cls(
+            name=cls.deserialize_value(data[ACCOUNT_NAME]),
+            currency=Currency(cls.deserialize_value(data[CURRENCY])),
+            balance=cls.deserialize_value(data[BALANCE]),
+            transactions=[Transaction.from_json(t) for t in cls.deserialize_value(data).get(TRANSACTIONS, [])],
+        )
