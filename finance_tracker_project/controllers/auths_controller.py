@@ -1,4 +1,4 @@
-from finance_tracker_project.dependencies import auth_service, session_controller
+from finance_tracker_project.dependencies import auths_service, sessions_controller
 from finance_tracker_project.models.user_account import UserAccount
 
 from finance_tracker_project.utils.utils import clear_screen
@@ -7,8 +7,8 @@ from finance_tracker_project.utils.utils import clear_screen
 class AuthController:
 
     def __init__(self):
-        self.auth_service = auth_service
-        self.session_controller = session_controller
+        self.auth_service = auths_service
+        self.session_controller = sessions_controller
 
     def run(self):
         users_list = self.auth_service.load_users_index()

@@ -1,15 +1,15 @@
 from finance_tracker_project.config.config import PAGE_SIZE
-from finance_tracker_project.dependencies import report_service, bank_service, transaction_controller
+from finance_tracker_project.dependencies import reports_service, banks_service, transactions_controller
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
 
 
-class BankController:
+class BanksController:
 
     def __init__(self):
-        self.transaction_controller = transaction_controller
-        self.report_service = report_service
-        self.bank_service = bank_service
+        self.transaction_controller = transactions_controller
+        self.report_service = reports_service
+        self.bank_service = banks_service
 
     def run_bank_session(self, account: BankAccount):
         while True:

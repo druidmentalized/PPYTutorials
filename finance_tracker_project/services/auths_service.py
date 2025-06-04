@@ -3,7 +3,7 @@ from finance_tracker_project.models.user_account import UserAccount
 from finance_tracker_project.repositories.users_repository import UsersRepository
 from finance_tracker_project.utils.hash_utils import Hasher
 
-class AuthService:
+class AuthsService:
 
     def __init__(self):
         self.users_repo = UsersRepository()

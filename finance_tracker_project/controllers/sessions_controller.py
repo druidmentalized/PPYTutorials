@@ -1,11 +1,11 @@
-from finance_tracker_project.dependencies import bank_controller, report_service
+from finance_tracker_project.dependencies import banks_controller, reports_service
 from finance_tracker_project.models.user_account import UserAccount
 
 
-class SessionController:
+class SessionsController:
     def __init__(self):
-        self.bank_controller = bank_controller
-        self.report_service = report_service
+        self.bank_controller = banks_controller
+        self.report_service = reports_service
 
     def run_session(self, user: UserAccount):
         while True:
