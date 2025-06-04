@@ -5,6 +5,9 @@ INDEX_FILE = f"{DATA_DIR}index.json"
 DATE_FORMAT = "%Y-%m-%d"
 SESSION_TIMEOUT = 600
 
+#Default values
+PAGE_SIZE = 10
+
 # Constants
 ## User Account
 LOGIN = "Login"
@@ -15,6 +18,7 @@ BANK_ACCOUNTS = "Bank_accounts"
 ## Bank Account
 ACCOUNT_NAME = "Name"
 CURRENCY = "Currency"
+BALANCE = "Balance"
 TRANSACTIONS = "Transactions"
 
 ## Transaction

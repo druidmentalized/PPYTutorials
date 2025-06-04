@@ -1,0 +1,3 @@
+class BanksRepository:
+    def __init__(self):
+        ...
