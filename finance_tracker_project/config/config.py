@@ -1,5 +1,5 @@
 # File paths
-DATA_DIR = "finance_tracker_project/data/"
+DATA_DIR = "data/"
 USERS_DIR = f"{DATA_DIR}users/"
 INDEX_FILE = f"{DATA_DIR}index.json"
 DATE_FORMAT = "%Y-%m-%d"
@@ -20,6 +20,7 @@ ACCOUNT_NAME = "Name"
 CURRENCY = "Currency"
 BALANCE = "Balance"
 TRANSACTIONS = "Transactions"
+CREATION_DATE = "Creation_date"
 
 ## Transaction
 AMOUNT = "Amount"

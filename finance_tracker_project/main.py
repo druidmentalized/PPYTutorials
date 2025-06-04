@@ -1,8 +1,8 @@
-from finance_tracker_project.controllers.auths_controller import AuthController
+from finance_tracker_project.dependencies import get_auths_controller
 
 
 def main():
-    AuthController().run()
+    get_auths_controller().run()
 
 if __name__ == '__main__':
     main()

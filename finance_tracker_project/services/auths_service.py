@@ -1,23 +1,20 @@
 from finance_tracker_project.config.config import LOGIN, PASSWORD_HASH
+from finance_tracker_project.dependencies import get_users_repo
 from finance_tracker_project.models.user_account import UserAccount
-from finance_tracker_project.repositories.users_repository import UsersRepository
 from finance_tracker_project.utils.hash_utils import Hasher
-
 class AuthsService:
 
     def __init__(self):
-        self.users_repo = UsersRepository()
+        self.users_repo = get_users_repo()
 
     def load_users_index(self):
         return self.users_repo.load_users_index()
 
     def login(self, username: str, password: str, users_list: list[dict]) -> UserAccount | None:
-        password_hash = Hasher.hash_password(password)
-
         for user in users_list:
-            if user[LOGIN] == username and user[PASSWORD_HASH] == password_hash:
-                return self.users_repo.load_user_profile(username)
-
+            if user[LOGIN] == username:
+                if Hasher.check_password(password, user[PASSWORD_HASH]):
+                    return self.users_repo.load_user_profile(username)
         print("Login failed. Please try again.")
         return None
 
