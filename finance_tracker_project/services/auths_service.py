@@ -1,5 +1,5 @@
 from finance_tracker_project.config.config import LOGIN, PASSWORD_HASH
-from finance_tracker_project.dependencies import get_users_repo
+from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.models.user_account import UserAccount
 from finance_tracker_project.utils.hash_utils import Hasher
 class AuthsService:

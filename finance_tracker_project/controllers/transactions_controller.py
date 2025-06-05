@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from finance_tracker_project.config.config import DATE_FORMAT, DATE_FORMAT_READABLE
-from finance_tracker_project.dependencies import get_transactions_service
+from finance_tracker_project.context import get_transactions_service
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
 

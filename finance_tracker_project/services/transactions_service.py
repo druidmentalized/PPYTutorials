@@ -1,10 +1,13 @@
+import warnings
 from datetime import datetime
 
-from finance_tracker_project.dependencies import get_users_repo
+from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.enums.category import Category
+from finance_tracker_project.errors.InvalidAmountError import InvalidAmountError
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.transaction import Transaction
 from finance_tracker_project.models.user_account import UserAccount
+from finance_tracker_project.warnings.NegativeBalanceWarning import NegativeBalanceWarning
 
 
 class TransactionsService:
@@ -22,9 +25,14 @@ class TransactionsService:
         except KeyError:
             category = Category.OTHER
 
+        if amount < 0:
+            raise InvalidAmountError("Amount must be positive number.")
+
         if transaction_type == "+":
             account.balance += amount
         else:
+            if account.balance - amount < 0:
+                warnings.warn("This transaction would result in a negative balance.", NegativeBalanceWarning)
             account.balance -= amount
 
         new_transaction = Transaction(

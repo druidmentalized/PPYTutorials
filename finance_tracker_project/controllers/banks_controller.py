@@ -1,11 +1,14 @@
+import warnings
 from datetime import datetime
 
-from finance_tracker_project.dependencies import get_reports_service, get_banks_service, get_transactions_controller
+from finance_tracker_project.context import get_reports_service, get_banks_service, get_transactions_controller
 from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_FORMAT_READABLE
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.transaction import Transaction
 from finance_tracker_project.models.user_account import UserAccount
+from finance_tracker_project.ui.console import print_positive, print_negative
+from finance_tracker_project.warnings.NegativeBalanceWarning import NegativeBalanceWarning
 
 
 class BanksController:
@@ -50,6 +53,14 @@ class BanksController:
             else:
                 print("Invalid choice. Try again.")
 
+    def show_info(self, account: BankAccount):
+        print(f"\n-- Information about {account.name} --")
+        print(f"Balance: {account.balance} {account.currency.name}")
+        if account.balance < 0:
+            warnings.warn("Balance of this account is below zero.", NegativeBalanceWarning)
+        print(f"Creation date: {account.creation_date.strftime(DATE_FORMAT)}")
+        print(f"Transactions: {len(account.transactions)}")
+
     def create_bank_account(self, user: UserAccount):
         print("-- Create New Bank Account --")
         bank_name = input("Bank name: ")
@@ -69,12 +80,6 @@ class BanksController:
 
         if user_input == "Y":
             self.banks_service.delete_bank_account(user, bank)
-
-    def show_info(self, account: BankAccount):
-        print(f"\n-- Information about {account.name} --")
-        print(f"Balance: {account.balance} {account.currency.name}")
-        print(f"Creation date: {account.creation_date.strftime(DATE_FORMAT)}")
-        print(f"Transactions: {len(account.transactions)}")
 
     def view_transactions(self, account: BankAccount):
         transactions = list(reversed(account.transactions))
@@ -113,7 +118,11 @@ class BanksController:
 
         print(f"\n--- Transactions (Page {curr_page + 1}) ---")
         for i, transaction in enumerate(page, start=1):
-            print(f"{start + i}. {transaction}")
+            text = f"{start + i}. {transaction}"
+            if transaction.transaction_type == "+":
+                print_positive(text)
+            else:
+                print_negative(text)
 
     def _get_paging_input(self) -> str:
         print("\n[n] Next page  |  [p] Previous page  |  [e] Exit")

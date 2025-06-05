@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Circular dependency problem resolved with better system introduction. Basic tests of the program completed">
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Transaction viewing enhanced. Filters for transactions implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance_tracker_project/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/config/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/auths_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/auths_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/banks_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/banks_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/sessions_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/sessions_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance_tracker_project/controllers/transactions_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/controllers/transactions_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/models/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/models/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/auths_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/auths_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/banks_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/banks_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/services/transactions_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/services/transactions_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,45 +58,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RunFinanceTracker.executor": "Run",
-    "Python.RunHangman.executor": "Run",
-    "Python.ex14.executor": "Run",
-    "Python.ex_1.executor": "Run",
-    "Python.ex_10.executor": "Run",
-    "Python.ex_11.executor": "Run",
-    "Python.ex_12.executor": "Run",
-    "Python.ex_13.executor": "Run",
-    "Python.ex_14.executor": "Run",
-    "Python.ex_15.executor": "Run",
-    "Python.ex_16.executor": "Run",
-    "Python.ex_17.executor": "Run",
-    "Python.ex_18.executor": "Run",
-    "Python.ex_2.executor": "Run",
-    "Python.ex_3.executor": "Run",
-    "Python.ex_4.executor": "Run",
-    "Python.ex_5.executor": "Run",
-    "Python.ex_6.executor": "Run",
-    "Python.ex_7.executor": "Run",
-    "Python.ex_8.executor": "Run",
-    "Python.ex_9.executor": "Run",
-    "Python.ex_advanced.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/dmitriy/PycharmProjects/PPYTasks/finance_tracker_project/controllers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "ide.date.format",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RunFinanceTracker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RunHangman.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_11.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_17.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_18.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_9.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ex_advanced.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dmitriy/PycharmProjects/PPYTasks/finance_tracker_project/controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ide.date.format&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/finance_tracker_project/controllers" />
@@ -218,7 +224,8 @@
       <workItem from="1748901585359" duration="4943000" />
       <workItem from="1748960508519" duration="7790000" />
       <workItem from="1749039794566" duration="3332000" />
-      <workItem from="1749047731407" duration="8742000" />
+      <workItem from="1749047731407" duration="9161000" />
+      <workItem from="1749123085838" duration="2092000" />
     </task>
     <task id="LOCAL-00001" summary="Extra files addition">
       <option name="closed" value="true" />
@@ -548,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749055706566</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Transaction viewing enhanced. Filters for transactions implemented">
+      <option name="closed" value="true" />
+      <created>1749057001773</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1749057001773</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Big UI update. Still needs testing and debugging" />
     <MESSAGE value="Little updates in decoupling game logic from the ui. Hangman images taken out into separate directory" />
     <MESSAGE value="Fixes in some of the hangman models, correct attempt passing to the ui class added" />
     <MESSAGE value="Color changes + last hangman model improvement" />
@@ -591,7 +605,8 @@
     <MESSAGE value="Added to_dict methods. Passing UserAccount all over the layers for saving measures" />
     <MESSAGE value="Added serialization interface for drier project construction" />
     <MESSAGE value="Circular dependency problem resolved with better system introduction. Basic tests of the program completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Circular dependency problem resolved with better system introduction. Basic tests of the program completed" />
+    <MESSAGE value="Transaction viewing enhanced. Filters for transactions implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transaction viewing enhanced. Filters for transactions implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
@@ -603,7 +618,7 @@
     <SUITE FILE_PATH="coverage/PPYTasks$ex_13.coverage" NAME="ex_13 Coverage Results" MODIFIED="1748622824281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_15.coverage" NAME="ex_15 Coverage Results" MODIFIED="1742340209981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_10.coverage" NAME="ex_10 Coverage Results" MODIFIED="1748621955498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />
-    <SUITE FILE_PATH="coverage/PPYTasks$RunFinanceTracker.coverage" NAME="RunFinanceTracker Coverage Results" MODIFIED="1749056649304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance_tracker_project" />
+    <SUITE FILE_PATH="coverage/PPYTasks$RunFinanceTracker.coverage" NAME="RunFinanceTracker Coverage Results" MODIFIED="1749124274657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance_tracker_project" />
     <SUITE FILE_PATH="coverage/PythonProject$ex_6.coverage" NAME="ex_6 Coverage Results" MODIFIED="1742339332657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex14.coverage" NAME="ex14 Coverage Results" MODIFIED="1747345639592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab9/source" />
     <SUITE FILE_PATH="coverage/PPYTasks$ex_3.coverage" NAME="ex_3 Coverage Results" MODIFIED="1748619967230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab12/source" />

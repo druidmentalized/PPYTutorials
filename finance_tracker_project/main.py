@@ -1,4 +1,4 @@
-from finance_tracker_project.dependencies import get_auths_controller
+from finance_tracker_project.context import get_auths_controller
 
 
 def main():

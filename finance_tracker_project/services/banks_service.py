@@ -1,4 +1,4 @@
-from finance_tracker_project.dependencies import get_users_repo
+from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount

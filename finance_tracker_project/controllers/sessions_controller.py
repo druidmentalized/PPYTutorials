@@ -1,4 +1,4 @@
-from finance_tracker_project.dependencies import get_banks_controller, get_reports_service
+from finance_tracker_project.context import get_banks_controller, get_reports_service
 from finance_tracker_project.models.user_account import UserAccount
 
 

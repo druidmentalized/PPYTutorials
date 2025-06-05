@@ -29,3 +29,10 @@ DATE = "Date"
 CATEGORY = "Category"
 DESCRIPTION = "Description"
 TRANSACTION_TYPE = "Transaction_type"
+
+#Colors
+POSITIVE_OPERATION_COLOR = "Positive_operation"
+NEGATIVE_OPERATION_COLOR = "Negative_operation"
+SUCCESS_COLOR = "Success"
+ERROR_COLOR = "Error"
+INFO_COLOR = "Info"

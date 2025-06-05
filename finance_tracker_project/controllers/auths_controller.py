@@ -1,7 +1,7 @@
 from finance_tracker_project.models.user_account import UserAccount
 
 from finance_tracker_project.utils.utils import clear_screen
-from finance_tracker_project.dependencies import get_auths_service, get_sessions_controller
+from finance_tracker_project.context import get_auths_service, get_sessions_controller
 
 
 class AuthsController:
