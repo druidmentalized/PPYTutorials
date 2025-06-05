@@ -6,14 +6,14 @@ from finance_tracker_project.utils.json_serializable import JsonSerializable
 
 
 class Transaction(JsonSerializable):
-    def __init__(self, amount: float, date: datetime, category: Category, description: str, transaction_type: str):
+    def __init__(self, amount: float, date: datetime, category: Category, description: str, transaction_type: str) -> None:
         self.amount = amount
         self.date = date
         self.category = category
         self.description = description
         self.transaction_type = transaction_type
 
-    def to_json(self):
+    def to_json(self) -> dict:
         return {
             AMOUNT: self.serialize_value(self.amount),
             DATE: self.serialize_value(self.date),
@@ -23,7 +23,7 @@ class Transaction(JsonSerializable):
         }
 
     @classmethod
-    def from_json(cls, data: dict):
+    def from_json(cls, data: dict) -> "Transaction":
         return cls(
             amount=cls.deserialize_value(data[AMOUNT]),
             date=datetime.strptime(cls.deserialize_value(data[DATE]), DATE_FORMAT),
@@ -32,6 +32,6 @@ class Transaction(JsonSerializable):
             transaction_type=cls.deserialize_value(data[TRANSACTION_TYPE])
         )
 
-    def __str__(self):
+    def __str__(self) -> str:
         sign = "+" if self.transaction_type == "+" else "-"
         return f"{self.date.strftime(DATE_FORMAT)} | {sign}{self.amount:.2f} | {self.category.value} | {self.description}"

@@ -1,0 +1,2 @@
+class DifferentPasswordsError(Exception):
+    pass    

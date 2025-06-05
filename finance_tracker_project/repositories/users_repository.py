@@ -6,7 +6,7 @@ from finance_tracker_project.models.user_account import UserAccount
 
 
 class UsersRepository:
-    def __init__(self, path=INDEX_FILE):
+    def __init__(self, path=INDEX_FILE) -> None:
         self.path = path
 
     def load_users_index(self) -> list[dict]:

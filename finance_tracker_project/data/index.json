@@ -6,5 +6,9 @@
   {
     "Login": "Dimaster",
     "Password_hash": "$2b$12$DJQdXy6v/PdQbpvvKKCPbeO7D5oA/TlQmACXWM0vhtQbyQxwifOD6"
+  },
+  {
+    "Login": "Pidorasik",
+    "Password_hash": "$2b$12$ZhpIRy3C.61OwGc7uw3MseS7t3wJQqAnI9twRG8wzlcL.wgfH/ei."
   }
 ]

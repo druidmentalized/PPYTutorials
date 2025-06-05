@@ -7,6 +7,6 @@ class Currency(Enum):
     RUB = ("RUB", "₽")
     ARS = ("ARS", "$")
 
-    def __init__(self, code, symbol):
+    def __init__(self, code, symbol) -> None:
         self.code = code
         self.symbol = symbol

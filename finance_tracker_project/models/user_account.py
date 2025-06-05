@@ -13,7 +13,7 @@ class UserAccount(JsonSerializable):
             password_hash: str,
             registration_date: Optional[datetime] = None,
             bank_accounts: Optional[list[BankAccount]] = None
-    ):
+    ) -> None:
         self.username = username
         self.password_hash = password_hash
         self.registration_date = registration_date if registration_date else datetime.now()
@@ -28,7 +28,7 @@ class UserAccount(JsonSerializable):
         }
 
     @classmethod
-    def from_json(cls, data: dict):
+    def from_json(cls, data: dict) -> "UserAccount":
         return cls(
             username=cls.deserialize_value(data[LOGIN]),
             password_hash=cls.deserialize_value(data[PASSWORD_HASH]),

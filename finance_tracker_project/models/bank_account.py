@@ -8,7 +8,7 @@ from finance_tracker_project.utils.json_serializable import JsonSerializable
 
 class BankAccount(JsonSerializable):
 
-    def __init__(self, name: str, currency: Currency, balance: float, transactions: list[Transaction]):
+    def __init__(self, name: str, currency: Currency, balance: float, transactions: list[Transaction]) -> None:
         self.name = name
         self.currency = currency
         self.balance = balance
@@ -25,7 +25,7 @@ class BankAccount(JsonSerializable):
         }
 
     @classmethod
-    def from_json(cls, data: dict):
+    def from_json(cls, data: dict) -> "BankAccount":
         currency_data = cls.deserialize_value(data[CURRENCY])
         currency = next(
             (c for c in Currency if [c.code, c.symbol] == currency_data),
