@@ -2,7 +2,8 @@ import warnings
 from datetime import datetime
 
 from finance_tracker_project.context import get_reports_service, get_banks_service, get_transactions_controller
-from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_FORMAT_READABLE
+from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_FORMAT_READABLE, \
+    SPENDING_REPORT_FILE, CATEGORY_SPENDING_REPORT_FILE
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.errors.DuplicateBankError import DuplicateBankError
 from finance_tracker_project.errors.InvalidCurrencyError import InvalidCurrencyError
@@ -11,7 +12,7 @@ from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.transaction import Transaction
 from finance_tracker_project.models.user_account import UserAccount
 from finance_tracker_project.ui.console import print_positive, print_negative, print_header, print_option, input_option, \
-    print_info, print_error, input_info
+    print_info, print_error, input_info, print_success
 from finance_tracker_project.warnings.NegativeBalanceWarning import NegativeBalanceWarning
 
 
@@ -95,21 +96,33 @@ class BanksController:
     def delete_bank_account(self, user: UserAccount, bank: BankAccount) -> None:
         user_input = input_info("Are you sure you want to delete this account?(Y/n) ")
 
-        if user_input == "Y":
+        if user_input.strip().lower() == "y":
             self.banks_service.delete_bank_account(user, bank)
             print_positive(f"Bank account '{bank}' deleted successfully.")
 
     def generate_spending_report(self, accounts: list[BankAccount]) -> None:
         try:
             self.reports_service.generate_spending_report(accounts)
+            print_success("Spending report generated successfully.")
         except NoReportableTransactionsError as e:
             print_error(str(e))
 
+        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+        if choice.strip().lower() == "y":
+            self.reports_service.export_spending_report_to_excel(accounts, SPENDING_REPORT_FILE)
+            print_success(f"Spending report exported to {SPENDING_REPORT_FILE}")
+
     def generate_category_report(self, accounts: list[BankAccount]) -> None:
         try:
-            self.reports_service.generate_category_report(accounts)
+            self.reports_service.export_category_report_to_excel(accounts)
+            print_success("Category pending report generated successfully.")
         except NoReportableTransactionsError as e:
             print_error(str(e))
+
+        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+        if choice.strip().lower() == "y":
+            self.reports_service.generate_category_report(accounts, CATEGORY_SPENDING_REPORT_FILE)
+            print_success(f"Category report exported to {CATEGORY_SPENDING_REPORT_FILE}")
 
     def view_transactions(self, account: BankAccount) -> None:
         transactions = list(reversed(account.transactions))

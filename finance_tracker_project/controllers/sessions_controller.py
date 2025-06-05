@@ -1,8 +1,10 @@
+from finance_tracker_project.config.config import GENERAL_SPENDING_REPORT_FILE, GENERAL_CATEGORY_SPENDING_REPORT_FILE
 from finance_tracker_project.context import get_banks_controller, get_reports_service
 from finance_tracker_project.errors.NoReportableTransactionsError import NoReportableTransactionsError
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
-from finance_tracker_project.ui.console import print_header, print_option, input_option, print_info, print_error
+from finance_tracker_project.ui.console import print_header, print_option, input_option, print_info, print_error, \
+    print_success, input_info
 
 
 class SessionsController:
@@ -58,11 +60,23 @@ class SessionsController:
     def generate_spending_report(self, accounts: list[BankAccount]) -> None:
         try:
             self.reports_service.generate_spending_report(accounts)
+            print_success("General spending report generated successfully.")
         except NoReportableTransactionsError as e:
             print_error(str(e))
+
+        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+        if choice.strip().lower() == "y":
+            self.reports_service.export_spending_report_to_excel(accounts, GENERAL_SPENDING_REPORT_FILE)
+            print_success(f"Spending report exported to {GENERAL_SPENDING_REPORT_FILE}")
 
     def generate_category_report(self, accounts: list[BankAccount]) -> None:
         try:
             self.reports_service.generate_category_report(accounts)
+            print_success("General category spending report generated successfully.")
         except NoReportableTransactionsError as e:
             print_error(str(e))
+
+        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+        if choice.strip().lower() == "y":
+            self.reports_service.export_category_report_to_excel(accounts, GENERAL_CATEGORY_SPENDING_REPORT_FILE)
+            print_success(f"Category report exported to {GENERAL_CATEGORY_SPENDING_REPORT_FILE}")
