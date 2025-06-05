@@ -47,6 +47,7 @@ class BanksController:
                 self.update_bank_account(user, bank)
             elif choice == "5":
                 self.delete_bank_account(user, bank)
+                return
             elif choice == "6":
                 self.reports_service.generate_spending_report([bank])
             elif choice == "7":
@@ -95,6 +96,7 @@ class BanksController:
 
         if user_input == "Y":
             self.banks_service.delete_bank_account(user, bank)
+            print_positive(f"Bank account '{bank}' deleted successfully.")
 
     def view_transactions(self, account: BankAccount) -> None:
         transactions = list(reversed(account.transactions))
