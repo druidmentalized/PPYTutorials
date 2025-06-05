@@ -6,6 +6,7 @@ from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_F
 from finance_tracker_project.enums.currency import Currency
 from finance_tracker_project.errors.DuplicateBankError import DuplicateBankError
 from finance_tracker_project.errors.InvalidCurrencyError import InvalidCurrencyError
+from finance_tracker_project.errors.NoReportableTransactionsError import NoReportableTransactionsError
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.transaction import Transaction
 from finance_tracker_project.models.user_account import UserAccount
@@ -49,9 +50,9 @@ class BanksController:
                 self.delete_bank_account(user, bank)
                 return
             elif choice == "6":
-                self.reports_service.generate_spending_report([bank])
+                self.generate_spending_report([bank])
             elif choice == "7":
-                self.reports_service.generate_category_report([bank])
+                self.generate_category_report([bank])
             elif choice == "e":
                 break
             else:
@@ -97,6 +98,18 @@ class BanksController:
         if user_input == "Y":
             self.banks_service.delete_bank_account(user, bank)
             print_positive(f"Bank account '{bank}' deleted successfully.")
+
+    def generate_spending_report(self, accounts: list[BankAccount]) -> None:
+        try:
+            self.reports_service.generate_spending_report(accounts)
+        except NoReportableTransactionsError as e:
+            print_error(str(e))
+
+    def generate_category_report(self, accounts: list[BankAccount]) -> None:
+        try:
+            self.reports_service.generate_category_report(accounts)
+        except NoReportableTransactionsError as e:
+            print_error(str(e))
 
     def view_transactions(self, account: BankAccount) -> None:
         transactions = list(reversed(account.transactions))

@@ -1,4 +1,6 @@
 from finance_tracker_project.context import get_banks_controller, get_reports_service
+from finance_tracker_project.errors.NoReportableTransactionsError import NoReportableTransactionsError
+from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
 from finance_tracker_project.ui.console import print_header, print_option, input_option, print_info, print_error
 
@@ -18,9 +20,9 @@ class SessionsController:
             elif choice == "2":
                 self.banks_controller.create_bank_account(user)
             elif choice == "3":
-                self.reports_service.generate_spending_report(user.bank_accounts)
+                self.generate_spending_report(user.bank_accounts)
             elif choice == "4":
-                self.reports_service.generate_category_report(user.bank_accounts)
+                self.generate_category_report(user.bank_accounts)
             elif choice == "e":
                 print_info("Exiting session...\n")
                 break
@@ -52,3 +54,15 @@ class SessionsController:
                 print_error("Invalid choice. Please try again.")
         except ValueError:
             print_error("Invalid input. Please enter a number.")
+
+    def generate_spending_report(self, accounts: list[BankAccount]) -> None:
+        try:
+            self.reports_service.generate_spending_report(accounts)
+        except NoReportableTransactionsError as e:
+            print_error(str(e))
+
+    def generate_category_report(self, accounts: list[BankAccount]) -> None:
+        try:
+            self.reports_service.generate_category_report(accounts)
+        except NoReportableTransactionsError as e:
+            print_error(str(e))

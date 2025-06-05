@@ -20,7 +20,7 @@ class TransactionsController:
             return None
 
         try:
-            user_input = input_info(f"Transaction date (format {DATE_FORMAT_READABLE}), blank for today: ")
+            user_input = input_info(f"Transaction date ({DATE_FORMAT_READABLE}), blank for today: ")
             date = datetime.strptime(user_input, DATE_FORMAT) if user_input else datetime.today()
         except ValueError:
             print_error(f"Invalid date format. Please use {DATE_FORMAT_READABLE}.")

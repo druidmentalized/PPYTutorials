@@ -1,0 +1,2 @@
+class NoReportableTransactionsError(Exception):
+    pass
