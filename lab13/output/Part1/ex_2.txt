@@ -1,0 +1,8 @@
+Color: red
+Wheel count: 6
+Color: blue
+Wheel count: 4
+Color: red
+Wheel count: 6
+Color: blue
+Wheel count: 8

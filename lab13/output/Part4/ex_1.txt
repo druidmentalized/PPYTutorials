@@ -1,0 +1,2 @@
+Movie title: Inception, year: 2010
+movie_test=Movie(title=Inception,year=2010)

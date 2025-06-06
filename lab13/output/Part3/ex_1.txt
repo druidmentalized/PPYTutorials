@@ -1,0 +1,4 @@
+Name: Dmitriy
+Age: 30
+Error accessing __ssn directly: 'Person' object has no attribute '__ssn'
+SSN (via name mangling): 123-45-6789

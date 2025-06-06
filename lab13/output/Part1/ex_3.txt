@@ -1,0 +1,4 @@
+Total number of employees: 5
+Manhattan: 2
+New-York: 1
+Los-Angeles: 2

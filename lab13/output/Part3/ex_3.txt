@@ -1,0 +1,3 @@
+Area: 50
+Error: property 'area' of 'Rectangle' object has no setter
+Updated area: 80

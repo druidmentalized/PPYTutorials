@@ -1,0 +1,3 @@
+In Celsius: 37.0
+In Fahrenheit: 98.6
+300K converted to Celsius: 166648.88888888888

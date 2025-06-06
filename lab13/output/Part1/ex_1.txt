@@ -1,0 +1,4 @@
+3 were created so far.
+First dog name: Dog1
+First dog name: Dog2
+First dog name: Dog3
