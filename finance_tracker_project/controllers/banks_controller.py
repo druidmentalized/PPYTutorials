@@ -5,6 +5,7 @@ from finance_tracker_project.context import get_reports_service, get_banks_servi
 from finance_tracker_project.config.config import PAGE_SIZE, DATE_FORMAT, DATE_FORMAT_READABLE, \
     SPENDING_REPORT_FILE, CATEGORY_SPENDING_REPORT_FILE
 from finance_tracker_project.enums.currency import Currency
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.DuplicateBankError import DuplicateBankError
 from finance_tracker_project.errors.InvalidCurrencyError import InvalidCurrencyError
 from finance_tracker_project.errors.NoReportableTransactionsError import NoReportableTransactionsError
@@ -63,8 +64,10 @@ class BanksController:
         print_header(f"\n-- Information about {account.name} --")
 
         balance_str = f"Balance: {account.balance} {account.currency.name}"
-        if account.balance > 0: print_positive(balance_str)
-        else: print_negative(balance_str)
+        if account.balance > 0:
+            print_positive(balance_str)
+        else:
+            print_negative(balance_str)
 
         if account.balance < 0: warnings.warn("Balance of this account is below zero.", NegativeBalanceWarning)
 
@@ -74,12 +77,12 @@ class BanksController:
     def create_bank_account(self, user: UserAccount) -> None:
         print_header("-- Create New Bank Account --")
         bank_name = input_info("Bank name: ")
-        print_info(f"\nSupported currencies: {", ".join([e.name for e in Currency])}")
+        print_info(f"\nSupported currencies: {', '.join([e.name for e in Currency])}")
         currency = input_info("Currency(abbreviation/sign): ")
         try:
             self.banks_service.create_bank_account(user, bank_name, currency)
             print_positive(f"Bank account '{bank_name}' created successfully.")
-        except DuplicateBankError | InvalidCurrencyError as e:
+        except (DuplicateBankError, InvalidCurrencyError, BlankDataError) as e:
             print_error(str(e))
 
     def update_bank_account(self, user: UserAccount, bank: BankAccount) -> None:
@@ -90,7 +93,7 @@ class BanksController:
         try:
             self.banks_service.update_bank_account(user, bank, bank_name, currency)
             print_positive(f"Bank account '{bank_name}' updated successfully.")
-        except DuplicateBankError | InvalidCurrencyError as e:
+        except (DuplicateBankError, InvalidCurrencyError, BlankDataError) as e:
             print_error(str(e))
 
     def delete_bank_account(self, user: UserAccount, bank: BankAccount) -> None:

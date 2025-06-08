@@ -3,6 +3,7 @@ from datetime import datetime
 
 from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.enums.category import Category
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.InvalidAmountError import InvalidAmountError
 from finance_tracker_project.errors.InvalidTransactionTypeError import InvalidTransactionTypeError
 from finance_tracker_project.models.bank_account import BankAccount
@@ -17,6 +18,9 @@ class TransactionsService:
 
     def add_transaction(self, user: UserAccount, account: BankAccount, amount: float, date: datetime, category_str: str,
                         description: str, transaction_type: str) -> None:
+        if amount == "" or date == "" or category_str == "" or transaction_type == "":
+            raise BlankDataError("Important fields shouldn't be blank.")
+        
         if transaction_type not in ("+", "-"):
             raise InvalidTransactionTypeError("Invalid transaction type. Use '+' for income or '-' for expense.")
 

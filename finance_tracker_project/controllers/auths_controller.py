@@ -1,8 +1,9 @@
 from finance_tracker_project.errors.AuthenticationError import AuthenticationError
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.DifferentPasswordsError import DifferentPasswordsError
 from finance_tracker_project.errors.DuplicateUserError import DuplicateUserError
 from finance_tracker_project.models.user_account import UserAccount
-from finance_tracker_project.ui.console import print_header, print_option, input_option, input_info, print_info, print_error
+from finance_tracker_project.ui.console import print_header, print_option, input_option, input_info, print_error
 
 from finance_tracker_project.utils.utils import clear_screen
 from finance_tracker_project.context import get_auths_service, get_sessions_controller
@@ -41,6 +42,9 @@ class AuthsController:
         except AuthenticationError as e:
             print_error(str(e))
             return None
+        except BlankDataError as e:
+            print_error(str(e))
+            return None
 
     def register(self) -> UserAccount | None:
         username = input_info("Username: ")
@@ -48,7 +52,7 @@ class AuthsController:
         confirm_password = input_info("Confirm Password: ")
         try:
             return self.auth_service.register(username, password, confirm_password)
-        except DifferentPasswordsError | DuplicateUserError as e:
+        except (DifferentPasswordsError, DuplicateUserError, BlankDataError) as e:
             print_error(str(e))
             return None
 

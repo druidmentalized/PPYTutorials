@@ -2,7 +2,9 @@ from datetime import datetime
 
 from finance_tracker_project.config.config import DATE_FORMAT, DATE_FORMAT_READABLE
 from finance_tracker_project.context import get_transactions_service
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.InvalidAmountError import InvalidAmountError
+from finance_tracker_project.errors.InvalidTransactionTypeError import InvalidTransactionTypeError
 from finance_tracker_project.models.bank_account import BankAccount
 from finance_tracker_project.models.user_account import UserAccount
 from finance_tracker_project.ui.console import print_error, input_info, print_header, print_positive
@@ -41,5 +43,5 @@ class TransactionsController:
         try:
             self.transactions_service.add_transaction(user, account, amount, date, category, description, transaction_type)
             print_positive("Transaction added successfully.")
-        except InvalidAmountError as e:
+        except (InvalidAmountError, InvalidTransactionTypeError, BlankDataError) as e:
             print_error(str(e))

@@ -1,5 +1,6 @@
 from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.enums.currency import Currency
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.DuplicateBankError import DuplicateBankError
 from finance_tracker_project.errors.InvalidCurrencyError import InvalidCurrencyError
 from finance_tracker_project.models.bank_account import BankAccount
@@ -18,6 +19,9 @@ class BankAccountsService:
         self.users_repo = get_users_repo()
 
     def create_bank_account(self, user: UserAccount, bank_name: str, currency_str: str) -> None:
+        if bank_name == "" or currency_str == "":
+            raise BlankDataError("Bank name and currency are required(must be non-blank).")
+        
         if any(acc.name.lower() == bank_name.lower() for acc in user.bank_accounts):
             raise DuplicateBankError(f"Bank account with the name '{bank_name}' already exists.")
 
@@ -34,6 +38,9 @@ class BankAccountsService:
         self.users_repo.save_user_profile(user)
 
     def update_bank_account(self, user: UserAccount, bank: BankAccount, bank_name: str, currency_str: str) -> None:
+        if bank_name == "" or currency_str == "":
+            raise BlankDataError("Bank name and currency are required(must be non-blank).")
+        
         bank_name = bank_name.strip() or bank.name
         currency_str = currency_str.strip() or bank.currency.name
 

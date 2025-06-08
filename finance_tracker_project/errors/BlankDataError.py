@@ -1,0 +1,2 @@
+class BlankDataError(Exception):
+    pass

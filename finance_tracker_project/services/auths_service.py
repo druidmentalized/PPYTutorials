@@ -1,6 +1,7 @@
 from finance_tracker_project.config.config import LOGIN, PASSWORD_HASH
 from finance_tracker_project.context import get_users_repo
 from finance_tracker_project.errors.AuthenticationError import AuthenticationError
+from finance_tracker_project.errors.BlankDataError import BlankDataError
 from finance_tracker_project.errors.DifferentPasswordsError import DifferentPasswordsError
 from finance_tracker_project.errors.DuplicateUserError import DuplicateUserError
 from finance_tracker_project.models.user_account import UserAccount
@@ -14,6 +15,9 @@ class AuthsService:
         return self.users_repo.load_users_index()
 
     def login(self, username: str, password: str, users_list: list[dict]) -> UserAccount | None:
+        if username == "" or password == "":
+            raise BlankDataError("Username and password is required(cannot be blank).")
+        
         for user in users_list:
             if user[LOGIN] == username:
                 if Hasher.check_password(password, user[PASSWORD_HASH]):
@@ -22,6 +26,9 @@ class AuthsService:
 
 
     def register(self, username: str, password: str, confirm_password: str) -> UserAccount | None:
+        if username == "" or password == "":
+            raise BlankDataError("Username and password is required(cannot be blank).")
+        
         if password != confirm_password:
             raise DifferentPasswordsError("Passwords do not match.")
         password_hash = Hasher.hash_password(password)

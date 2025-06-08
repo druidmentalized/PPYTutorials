@@ -10,5 +10,9 @@
   {
     "Login": "Pidorasik",
     "Password_hash": "$2b$12$ZhpIRy3C.61OwGc7uw3MseS7t3wJQqAnI9twRG8wzlcL.wgfH/ei."
+  },
+  {
+    "Login": "",
+    "Password_hash": "$2b$12$g8krCqB8FGQvDyVZwKVMhe5jzawo/3Vtfi.4x2055SorThfCdxhnS"
   }
 ]
