@@ -107,25 +107,23 @@ class BanksController:
         try:
             self.reports_service.generate_spending_report(accounts)
             print_success("Spending report generated successfully.")
+            choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+            if choice.strip().lower() == "y":
+                self.reports_service.export_spending_report_to_excel(accounts, SPENDING_REPORT_FILE)
+                print_success(f"Spending report exported to {SPENDING_REPORT_FILE}")
         except NoReportableTransactionsError as e:
             print_error(str(e))
-
-        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
-        if choice.strip().lower() == "y":
-            self.reports_service.export_spending_report_to_excel(accounts, SPENDING_REPORT_FILE)
-            print_success(f"Spending report exported to {SPENDING_REPORT_FILE}")
 
     def generate_category_report(self, accounts: list[BankAccount]) -> None:
         try:
             self.reports_service.export_category_report_to_excel(accounts)
             print_success("Category pending report generated successfully.")
+            choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
+            if choice.strip().lower() == "y":
+                self.reports_service.generate_category_report(accounts, CATEGORY_SPENDING_REPORT_FILE)
+                print_success(f"Category report exported to {CATEGORY_SPENDING_REPORT_FILE}")
         except NoReportableTransactionsError as e:
             print_error(str(e))
-
-        choice = input_info("Would you like to export report to the Excel spreadsheet? (Y/n)")
-        if choice.strip().lower() == "y":
-            self.reports_service.generate_category_report(accounts, CATEGORY_SPENDING_REPORT_FILE)
-            print_success(f"Category report exported to {CATEGORY_SPENDING_REPORT_FILE}")
 
     def view_transactions(self, account: BankAccount) -> None:
         transactions = list(reversed(account.transactions))
