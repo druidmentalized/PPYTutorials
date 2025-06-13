@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Added correct exception handling for report drawing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_tracker_project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/README.md" afterDir="false" />
+    <list default="true" id="1f4ca0f1-66d6-4fd5-8972-b8da442464f7" name="Changes" comment="Update README">
+      <change beforePath="$PROJECT_DIR$/finance_tracker_project/data/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/finance_tracker_project/data/index.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,15 +222,7 @@
       <workItem from="1749413916287" duration="1451000" />
       <workItem from="1749473175312" duration="10000" />
       <workItem from="1749814822325" duration="14000" />
-      <workItem from="1749814839685" duration="458000" />
-    </task>
-    <task id="LOCAL-00002" summary="Create README.md">
-      <option name="closed" value="true" />
-      <created>1742675639720</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742675639720</updated>
+      <workItem from="1749814839685" duration="878000" />
     </task>
     <task id="LOCAL-00003" summary="Lab 4 tasks set completed">
       <option name="closed" value="true" />
@@ -617,7 +608,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749415255676</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Update README">
+      <option name="closed" value="true" />
+      <created>1749815710128</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1749815710128</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Extra exercise made" />
     <MESSAGE value="All tasks completed" />
     <MESSAGE value="Lab 10 completed" />
     <MESSAGE value="Lab 11 completed" />
@@ -660,7 +658,8 @@
     <MESSAGE value="Lab13 completed" />
     <MESSAGE value="Better data validation and error handling added" />
     <MESSAGE value="Added correct exception handling for report drawing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added correct exception handling for report drawing" />
+    <MESSAGE value="Update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonProject$ex_9.coverage" NAME="ex_9 Coverage Results" MODIFIED="1742339590627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1/source" />
